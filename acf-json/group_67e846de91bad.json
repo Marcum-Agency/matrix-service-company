@@ -1,0 +1,82 @@
+{
+    "key": "group_67e846de91bad",
+    "title": "Market Details",
+    "fields": [
+        {
+            "key": "field_67e846de9592e",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "Enter a short description for the category.",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_67e846de95937",
+            "label": "Related Projects",
+            "name": "related_projects",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "post_type": [
+                "project"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "elements": "",
+            "bidirectional": 1,
+            "bidirectional_target": [
+                "field_67e35e8d4853f"
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "market"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1743302054
+}

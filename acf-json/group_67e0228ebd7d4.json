@@ -1,0 +1,147 @@
+{
+    "key": "group_67e0228ebd7d4",
+    "title": "Project Settings",
+    "fields": [
+        {
+            "key": "field_67e0228fecbda",
+            "label": "Project Location",
+            "name": "project_location",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the City, State if the project is in the United states, otherwise enter City, Country.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e364765e4de",
+            "label": "Performed By",
+            "name": "performed_by",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-image-checkbox",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "pdm": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/Engineering.svg\">",
+                "nac": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/NAC.svg\">",
+                "service": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/Services.svg\">",
+                "applied": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/Apptech.svg\">"
+            },
+            "default_value": [],
+            "return_format": "array",
+            "allow_custom": 0,
+            "allow_in_bindings": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_67e35e8d4853f",
+            "label": "Capability Category",
+            "name": "capability",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Select a Capability and sub-capability from the left side column.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "post_type": [
+                "capability"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": 2,
+            "allow_in_bindings": 1,
+            "elements": "",
+            "bidirectional": 1,
+            "bidirectional_target": [
+                "field_67e36df320b30"
+            ]
+        },
+        {
+            "key": "field_67e84710d2323",
+            "label": "Market Category",
+            "name": "market_category",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Select a Market and sub-capability from the left side column.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "post_type": [
+                "market"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": 2,
+            "allow_in_bindings": 1,
+            "elements": "",
+            "bidirectional": 1,
+            "bidirectional_target": [
+                "field_67e846de95937"
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1743306245
+}

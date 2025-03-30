@@ -1,0 +1,358 @@
+{
+    "key": "group_67d1d6bdcd365",
+    "title": "BLOCK:  Split > Headline",
+    "fields": [
+        {
+            "key": "field_67d1d6bdd8c1f",
+            "label": "Orientation",
+            "name": "orientation",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "l2r": "Left to Right",
+                "r2l": "Right to Left"
+            },
+            "default_value": "l2r",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "allow_in_bindings": 1,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_67d1d9a1d85d2",
+            "label": "Static",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 1,
+            "selected": 0
+        },
+        {
+            "key": "field_67d1d9c0d85d3",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67d1d9d7d85d4",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_67dd989e3795b",
+            "label": "Overflow Area",
+            "name": "overflow_area",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Place content here that you want hidden until \"Read More\" is clicked.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_67d462b1ee5e2",
+            "label": "Call to Action",
+            "name": "ctas",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67d4638ef91f2",
+                    "label": "CTA",
+                    "name": "cta",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "clone": [
+                        "field_67a9baf87bf6c"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_67d462b1ee5e2"
+                }
+            ]
+        },
+        {
+            "key": "field_67d1da01d85d5",
+            "label": "Headline",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67d466e3ba66b",
+            "label": "Call Out Header",
+            "name": "call_out_header",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67ddb9e594ac6",
+            "label": "Stats",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67ddc1e6e2adb",
+            "label": "Stats",
+            "name": "stats",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_67ddbfad55395"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_67ddb9f194ac7",
+            "label": "Accordian",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67e55ec9788e3",
+            "label": "Accordian Tabs",
+            "name": "accordian_tabs",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_67e5a3b897288",
+            "button_label": "Add Tab",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67e5a3b897288",
+                    "label": "Headline",
+                    "name": "headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67e55ec9788e3"
+                },
+                {
+                    "key": "field_67e5a3c397289",
+                    "label": "Tab Content",
+                    "name": "tab_content",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_67e55ec9788e3"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "mrcm\/fifty-fifty-no-media"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1743102962
+}
