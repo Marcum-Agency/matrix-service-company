@@ -1,6 +1,6 @@
 {
     "key": "group_67e629f88792a",
-    "title": "Block > Resource",
+    "title": "BLOCK > Resource",
     "fields": [
         {
             "key": "field_67e629f811ae5",
@@ -142,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743138429
+    "modified": 1743551334
 }

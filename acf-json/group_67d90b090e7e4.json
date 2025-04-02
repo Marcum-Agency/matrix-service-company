@@ -1,0 +1,216 @@
+{
+    "key": "group_67d90b090e7e4",
+    "title": "BLOCK: Slider",
+    "fields": [
+        {
+            "key": "field_67d90b09ee99b",
+            "label": "Slider",
+            "name": "carousel",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_67d90b57ee99e",
+            "button_label": "Add Slide",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67d9a18f473e1",
+                    "label": "Slide Type",
+                    "name": "slide_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "choices": {
+                        "market": "Market",
+                        "capabilities": "Capabilities"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 1,
+                    "ajax": 1,
+                    "placeholder": "",
+                    "parent_repeater": "field_67d90b09ee99b"
+                },
+                {
+                    "key": "field_67d9a140479df",
+                    "label": "Market Category",
+                    "name": "market_category",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67d9a18f473e1",
+                                "operator": "==",
+                                "value": "market"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "post_type": [
+                        "market"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_67d90b09ee99b"
+                },
+                {
+                    "key": "field_67d9a171473e0",
+                    "label": "Capabilities Category",
+                    "name": "capabilities_category",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67d9a18f473e1",
+                                "operator": "==",
+                                "value": "capabilities"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "post_type": [
+                        "capability"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_67d90b09ee99b"
+                },
+                {
+                    "key": "field_67d90b57ee99e",
+                    "label": "Project",
+                    "name": "project",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "post_type": [
+                        "project"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_67d90b09ee99b"
+                },
+                {
+                    "key": "field_67d90b1eee99c",
+                    "label": "Slide Background",
+                    "name": "slide_background",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_67d90b09ee99b"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "mrcm\/slider"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1743547166
+}
