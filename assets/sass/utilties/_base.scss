@@ -1,0 +1,234 @@
+@layer defaults {
+    body {
+      font: normal 400 1rem mundial
+    }
+  
+    p a:not([class]) {
+      color: inherit;
+      text-decoration-color: oklab(from currentcolor l a b / .6)
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 600;
+      line-height: 1;
+      line-height: 1.6cap;
+      text-box: trim-both cap alphabetic;
+      text-transform: uppercase;
+      text-wrap: pretty;
+    }
+  
+    :is(h1, h2, h3, h4, h5, h6) :is(em, i) {
+      font-style: italic
+    }
+  
+    @supports selector(*:has(*)) {
+      .notification--browser {
+        display: none
+      }
+    }
+  
+    :root {
+      --oklab-gray: .33 0 0;
+      --oklab-green: .71 -.12 .11;
+      --oklab-white: 1 0 0;
+      --oklab-black: 0 0 0;
+      --color-gray: oklab(var(--oklab-gray));
+      --color-light-gray: oklab(from var(--color-gray) calc(l + .55) a b);
+      --color-green: oklab(var(--oklab-green));
+      --color-white: oklab(var(--oklab-white));
+      --color-black: oklab(var(--oklab-black));
+    }
+  
+    ::-webkit-input-placeholder {
+      color: inherit;
+      font-family: inherit;
+      font-style: italic;
+      opacity: .3
+    }
+  
+    ::-ms-input-placeholder {
+      color: inherit;
+      font-family: inherit;
+      font-style: italic;
+      opacity: .3
+    }
+  
+    ::-moz-placeholder {
+      color: inherit;
+      font-family: inherit;
+      font-style: italic;
+      opacity: .3
+    }
+  
+    :-ms-input-placeholder {
+      color: inherit;
+      font-family: inherit;
+      font-style: italic;
+      opacity: .3
+    }
+  
+    ::placeholder {
+      color: inherit;
+      font-family: inherit;
+      font-style: italic;
+      opacity: .3
+    }
+  
+    /**
+     *
+     *  Notification Styles (no JavaScript & outdated browser)
+     *
+     */
+    .notification {
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9999
+    }
+  
+    .notification-wrap {
+      background-color: var(--color-gray);
+      height: 100%;
+      opacity: .5;
+      width: 100%;
+    }
+  
+    .notification-body {
+      background-color: #F0F0F0;
+      border-radius: 1.25rem;
+      font-family: system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      left: 50%;
+      max-width: 80%;
+      padding: 1.5625rem;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%)
+    }
+  
+    @media (min-width:48em) {
+      .notification-body {
+        border-radius: 3.125rem;
+        padding: 3.125rem
+      }
+    }
+  
+    .notification-body p {
+      color: var(--color-gray);
+      line-height: 1.5
+    }
+  
+    .notification-body p a,
+    .notification-body p button {
+      border-bottom: 1px solid color-mix(in oklab, var(--color-green), var(--color-white) 70%);
+      color: var(--color-green);
+    }
+  
+    .notification-body p a {
+      text-decoration: none
+    }
+  
+    @media (hover:hover) and (pointer:fine) {
+  
+      .notification-body p a:hover,
+      .notification-body p button:hover {
+        border-bottom-color: var(--color-green)
+      }
+    }
+  
+    .main--site {
+      min-height: 100dvh;
+    }
+  
+    /**
+     *
+     *  Lightbox Styles (global / default)
+     *
+     */
+    .lightbox[ open] {
+      background-color: transparent;
+      block-size: 100dvb;
+      display: grid;
+      inline-size: 100vi;
+      max-block-size: 100dvb;
+      max-inline-size: 100vi;
+      overflow: hidden;
+      place-items: center
+    }
+  
+    .lightbox[ open]::backdrop {
+      background: oklab(0 0 0 / .6)
+    }
+  
+    .lightbox-container {
+      background-color: var(--color-white);
+      block-size: fit-content;
+      inline-size: fit-content;
+      max-block-size: calc(100% - 3.125rem);
+      max-inline-size: calc(100% - 3.125rem);
+      overflow-y: auto;
+      padding: 1.5625rem;
+      position: relative;
+    }
+  
+    @media (min-width:48em) {
+      .lightbox-container {
+        max-block-size: calc(100% - 6.25rem);
+        max-inline-size: calc(100% - 6.25rem);
+        padding: 3.125rem
+      }
+    }
+  
+    .lightbox-close-btn {
+      inset: 0 0 auto auto;
+      opacity: .3;
+      position: absolute
+    }
+  
+    @media (hover:hover) and (pointer:fine) {
+      .lightbox-close-btn {
+        &:hover {
+          opacity: unset
+        }
+  
+        transition: opacity 250ms linear
+      }
+    }
+  
+    .lightbox-close-btn-icon {
+      block-size: 1.75rem;
+      fill: var(--color-gray);
+      inline-size: 1.75rem;
+    }
+  
+    @media (hover:hover) and (pointer:fine) {
+      .lightbox-close-btn-icon {
+        scale: .8;
+        transition: scale 250ms cubic-bezier(.165, .84, .44, 1), translate 250ms cubic-bezier(.165, .84, .44, 1)
+      }
+  
+      .lightbox-close-btn:hover .lightbox-close-btn-icon {
+        scale: 1;
+        translate: 0 -.25rem
+      }
+  
+      .lightbox-close-btn:active .lightbox-close-btn-icon {
+        scale: .8;
+        transition-duration: 50ms;
+        translate: 0 .25rem
+      }
+    }
+  
+    @media (min-width:48em) {
+      .lightbox-close-btn-icon {
+        block-size: 2.5rem;
+        inline-size: 2.5rem
+      }
+    }
+  }

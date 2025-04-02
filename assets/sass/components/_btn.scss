@@ -1,0 +1,35 @@
+.btn {
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-weight: 600;
+    letter-spacing: .05em;
+    padding: .5em 2.25em 0.7em;
+    line-height: 1em;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.btn-outline {
+    border: 2px solid var(--color-black);
+    background: none;
+    color: var(--color-black);
+    transition: all .3s ease;
+
+    &:hover {
+        background: var(--color-green);
+        color: var(--color-white);
+        border-color: var(--color-green);
+    }
+}
+
+.d-none {
+    height: 0 !important;
+}
+
+.btn--swipe {
+    text-align: left;
+    padding: 0;
+    color: #707070;
+    display: inline-block;
+    position: relative;
+}

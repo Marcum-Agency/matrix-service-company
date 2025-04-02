@@ -1,0 +1,79 @@
+@layer helpers {
+    .ff-mundial {
+      font-family: mundial
+    }
+  
+    .text-green {
+      color: var(--color-green);
+    }
+  
+    .fw-300 {
+      font-weight: 300
+    }
+  
+    .fw-400 {
+      font-weight: 400
+    }
+  
+    .fw-600 {
+      font-weight: 600
+    }
+  
+    .fs-italic {
+      font-style: italic
+    }
+  
+    .tt-uppercase {
+      text-transform: uppercase
+    }
+  
+    .ls-\.025 {
+      letter-spacing: .025em
+    }
+  
+    .ls-\.05 {
+      letter-spacing: .05em
+    }
+  
+    .ls-\.075 {
+      letter-spacing: .075em
+    }
+  
+    .ls-\.1 {
+      letter-spacing: .1em
+    }
+  
+    .ls-\.15 {
+      letter-spacing: .15em
+    }
+  
+    .is-hidden {
+      display: none
+    }
+  
+    .container--site {
+      margin-inline: auto;
+      max-inline-size: 80rem;
+      padding-inline: 1.25rem
+    }
+  
+    .mrcm-block {
+      min-height: 50dvb;
+    }
+  
+    .block-padding-y {
+      padding-block: 1.25rem;
+  
+      @media screen and (min-width:37.5em) {
+        padding-block: 2.5rem
+      }
+  
+      @media screen and (min-width:48em) {
+        padding-block: 3.75rem
+      }
+  
+      @media screen and (min-width:60em) {
+        padding-block: 5rem
+      }
+    }
+  }
