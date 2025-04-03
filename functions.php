@@ -9,7 +9,7 @@ include_once get_template_directory() . '/inc/helpers.php';
 include_once get_template_directory() . '/inc/classes.php';
 include_once get_template_directory() . '/inc/actions.php';
 include_once get_template_directory() . '/inc/filters.php';
-
+	
 
 
 /* --------------------------------------------------------- */
@@ -36,6 +36,7 @@ add_filter_msc( array(
     [ 'nav_menu_item_id', 10, 2 ],
     [ 'nav_menu_link_attributes', 10, 4 ],
     'wp_img_tag_add_auto_sizes',
-    [ 'wp_nav_menu_container_allowedtags', 10, 1 ]
+    [ 'wp_nav_menu_container_allowedtags', 10, 1 ],
+    ['get_the_archive_title', 10, 2]
 ) );
 remove_filter( 'wp_robots', 'wp_robots_max_image_preview_large' );

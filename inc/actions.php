@@ -70,6 +70,13 @@ function wp_enqueue_scripts_msc(){
         false,
         true
     );   
+    wp_enqueue_script(
+        'odometer',
+        get_template_directory_uri(). '/javascript/odometer.min.js?v' .rand(10000, 99999),
+        array(),
+        false,
+        true
+    ); 
     wp_localize_script(
         'app',
         'MAGIC',
@@ -78,6 +85,16 @@ function wp_enqueue_scripts_msc(){
             'apiUrl' => admin_url( 'admin-ajax.php' )
         )
     );
+    wp_enqueue_script(
+        'custom js',
+        get_template_directory_uri() . '/javascript/custom.js',
+        array( 'jquery' ),
+        date('Y-m-d'),
+        true
+    );
+
+
+
     wp_dequeue_style( 'classic-theme-styles' );
     // wp_dequeue_style( 'global-styles' );
     // wp_dequeue_style( 'wp-block-library' );
@@ -93,7 +110,7 @@ function generateBreadcrumb() {
     global $post;
     $breadcrumb = [];
     
-    if(is_singular( array('project','capability') )) {
+    if(is_singular( array('project','capability','market') )) {
 
         $post_type = get_post_type_object(get_post_type());
         $archive_link = get_post_type_archive_link($post_type->name);
