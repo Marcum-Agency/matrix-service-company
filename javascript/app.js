@@ -1,11 +1,11 @@
 ( ( NAMESPACE, _ ) => {
 
-  document.addEventListener("click", function(event) {
+  /*document.addEventListener("click", function(event) {
     if (event.target.closest(".has-megamenu .arrow")) {
         document.querySelector(".mega-menu-wrapper")?.classList.add("active");
         document.documentElement.classList.add("locked");
     }
-});
+});*/
 
 // Only add close button if viewport is less than 37.5em (600px)
 if (window.matchMedia("(max-width: 37.5em)").matches) {
@@ -194,3 +194,7 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
 
 
 })( MAGIC.appName || "App", MRCM || {} );
+
+
+
+
