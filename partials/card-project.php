@@ -6,7 +6,7 @@
         <!-- Market -->
         <?php $market = get_field('market_category');		
         if ( $market && ! is_wp_error( $market ) ) : ?>
-            <span class="project__capability"><?php echo $market[0]->post_title; ?></span>
+            <span class="category"><?php echo $market[0]->post_title; ?></span>
         <?php endif; ?>
 
         <!-- Title -->

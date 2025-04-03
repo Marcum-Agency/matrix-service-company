@@ -1,7 +1,10 @@
 <div <?php post_class('card'); ?>>
+    <div class='card-image'>
+        <?php the_post_thumbnail('medium'); ?>
+    </div>
     <div class='card-details'>
         <!-- Category -->
-        <span class="post-category">
+        <span class="category">
             <?php $categories = get_the_category($post->ID);
             if ( ! empty( $categories ) ) {
                 echo esc_html( $categories[0]->name );	
