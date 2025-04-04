@@ -1,0 +1,76 @@
+{
+  "key": "group_67c5d6cc405bd",
+  "title": "MRCM Block:Logo Carousel",
+  "fields": [
+    {
+      "key": "field_67c5d6cc47598",
+      "label": "Header",
+      "name": "header",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "relevanssi_exclude": 0,
+      "default_value": "",
+      "maxlength": "",
+      "allow_in_bindings": 0,
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_67c5d6e347599",
+      "label": "Logos",
+      "name": "logos",
+      "aria-label": "",
+      "type": "gallery",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "relevanssi_exclude": 0,
+      "return_format": "id",
+      "library": "all",
+      "min": 4,
+      "max": "",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "insert": "append",
+      "preview_size": "medium"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "mrcm/logo-carousel"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1743652850
+}

@@ -3,60 +3,6 @@
     "title": "BLOCK:  Split > Headline",
     "fields": [
         {
-            "key": "field_67d1d6bdd8c1f",
-            "label": "Orientation",
-            "name": "orientation",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "choices": {
-                "l2r": "Left to Right",
-                "r2l": "Right to Left"
-            },
-            "default_value": "l2r",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 1,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_67eafbef56e87",
-            "label": "Copy Orientation",
-            "name": "copy_orientation",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "choices": {
-                "copy-l2r": "Left to Right",
-                "copy-r2l": "Right to Left"
-            },
-            "default_value": "copy-l2r",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 1,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_67d1d9a1d85d2",
             "label": "Static",
             "name": "",
@@ -74,6 +20,28 @@
             "placement": "top",
             "endpoint": 1,
             "selected": 0
+        },
+        {
+            "key": "field_67d1d6bddc600",
+            "label": "Headline",
+            "name": "headline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_67d1d9c0d85d3",
@@ -361,6 +329,47 @@
                     "parent_repeater": "field_67e55ec9788e3"
                 }
             ]
+        },
+        {
+            "key": "field_67eecd5978833",
+            "label": "Styles",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67eecd6578834",
+            "label": "Block Visuals",
+            "name": "block_visuals",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_67eecdbfdfce1"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -381,5 +390,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743453225
+    "modified": 1743709202
 }

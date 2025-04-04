@@ -1,9 +1,9 @@
 {
-    "key": "group_67e0b295b9c11",
-    "title": "BLOCK:  Split > Media",
+    "key": "group_67dd81952eb09",
+    "title": "BLOCK:  Split > Number",
     "fields": [
         {
-            "key": "field_67e0b295bcecf",
+            "key": "field_67dd819531e36",
             "label": "Static",
             "name": "",
             "aria-label": "",
@@ -22,13 +22,13 @@
             "selected": 0
         },
         {
-            "key": "field_67e0b295bced4",
+            "key": "field_67dd819531e3e",
             "label": "Title",
             "name": "title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -44,7 +44,7 @@
             "append": ""
         },
         {
-            "key": "field_67e0b295bced9",
+            "key": "field_67dd819531e46",
             "label": "Description",
             "name": "description",
             "aria-label": "",
@@ -66,29 +66,7 @@
             "delay": 0
         },
         {
-            "key": "field_67e0b295bcede",
-            "label": "Overflow Area",
-            "name": "overflow_area",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "Place content here that you want hidden until \"Read More\" is clicked.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_67e0b295bcee3",
+            "key": "field_67dd819531e4d",
             "label": "Call to Action",
             "name": "ctas",
             "aria-label": "",
@@ -111,7 +89,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_67e0b295c4436",
+                    "key": "field_67dd81953805d",
                     "label": "CTA",
                     "name": "cta",
                     "aria-label": "",
@@ -132,13 +110,13 @@
                     "layout": "block",
                     "prefix_label": 0,
                     "prefix_name": 0,
-                    "parent_repeater": "field_67e0b295bcee3"
+                    "parent_repeater": "field_67dd819531e4d"
                 }
             ]
         },
         {
-            "key": "field_67e0b295bcee7",
-            "label": "Media",
+            "key": "field_67dd819531e55",
+            "label": "Dynamic",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -156,11 +134,11 @@
             "selected": 0
         },
         {
-            "key": "field_67e0b295bceec",
-            "label": "Section Image",
-            "name": "section_image",
+            "key": "field_67dd819531e6b",
+            "label": "Number",
+            "name": "number",
             "aria-label": "",
-            "type": "image",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -170,110 +148,47 @@
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 1,
-            "preview_size": "medium"
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_67e6b8c6104de",
-            "label": "Accordion",
-            "name": "",
+            "key": "field_67dd819531e73",
+            "label": "Unit",
+            "name": "unit",
             "aria-label": "",
-            "type": "tab",
+            "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67dd819531e5d",
+                        "operator": "==",
+                        "value": "number"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_67e6b8d5104df",
-            "label": "Accordion Tabs",
-            "name": "accordion_tabs",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "field_67e6b919104e0",
-            "button_label": "Add Tab",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_67e6b919104e0",
-                    "label": "Headline",
-                    "name": "headline",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33",
-                        "class": "",
-                        "id": ""
-                    },
-                    "relevanssi_exclude": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67e6b8d5104df"
-                },
-                {
-                    "key": "field_67e6b921104e1",
-                    "label": "Tab Content",
-                    "name": "tab_content",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "66",
-                        "class": "",
-                        "id": ""
-                    },
-                    "relevanssi_exclude": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_67e6b8d5104df"
-                }
-            ]
-        },
-        {
-            "key": "field_67eee15f30e5e",
+            "key": "field_67eee1918442c",
             "label": "Styles",
             "name": "",
             "aria-label": "",
@@ -292,7 +207,7 @@
             "selected": 0
         },
         {
-            "key": "field_67eee16730e5f",
+            "key": "field_67eee1b08442d",
             "label": "Block Visuals",
             "name": "block_visuals",
             "aria-label": "",
@@ -305,7 +220,6 @@
                 "class": "",
                 "id": ""
             },
-            "relevanssi_exclude": 0,
             "clone": [
                 "field_67eecdbfdfce1"
             ],
@@ -320,7 +234,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "mrcm\/split-media"
+                "value": "mrcm\/split-number"
             }
         ]
     ],
@@ -333,5 +247,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743708546
+    "modified": 1743711288
 }

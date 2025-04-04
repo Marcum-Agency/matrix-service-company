@@ -32,6 +32,71 @@
             "placeholder": ""
         },
         {
+            "key": "field_67eee5390d984",
+            "label": "Headline",
+            "name": "headline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67ec7b7c72842",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67eee54f0d985",
+            "label": "Background Image",
+            "name": "background",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67ec7b7c72842",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
             "key": "field_67ec7d30ea481",
             "label": "Custom Tabs",
             "name": "custom_tabs",
@@ -54,7 +119,7 @@
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -64,7 +129,7 @@
             "sub_fields": [
                 {
                     "key": "field_67ec7d50ea482",
-                    "label": "Header",
+                    "label": "Tab Name",
                     "name": "header",
                     "aria-label": "",
                     "type": "text",
@@ -72,7 +137,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -86,11 +151,57 @@
                     "parent_repeater": "field_67ec7d30ea481"
                 },
                 {
-                    "key": "field_67ec7d5aea483",
-                    "label": "Background Image",
-                    "name": "background_image",
+                    "key": "field_67eee5780d986",
+                    "label": "Full Headline",
+                    "name": "full_headline",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "text",
+                    "instructions": "Enter the headline for this tab. This can be longer than the Tab Name. If left blank, Tab Name will be used instead.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67ec7d30ea481"
+                },
+                {
+                    "key": "field_67ee175c52a3f",
+                    "label": "Tab Content",
+                    "name": "tab_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_67ec7d30ea481"
+                },
+                {
+                    "key": "field_67ee167f52a3e",
+                    "label": "Right Column",
+                    "name": "right_column",
+                    "aria-label": "",
+                    "type": "flexible_content",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -100,17 +211,52 @@
                         "id": ""
                     },
                     "relevanssi_exclude": 0,
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 0,
-                    "preview_size": "medium",
+                    "layouts": {
+                        "layout_67ee1682df553": {
+                            "key": "layout_67ee1682df553",
+                            "name": "content",
+                            "label": "Content",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_67eee5cb0d987",
+                                    "label": "Right Column Content",
+                                    "name": "right_column_content",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "relevanssi_exclude": 0,
+                                    "default_value": "",
+                                    "allow_in_bindings": 0,
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_67eee5f30d989": {
+                            "key": "layout_67eee5f30d989",
+                            "name": "accordion",
+                            "label": "Accordion",
+                            "display": "block",
+                            "sub_fields": [],
+                            "min": "",
+                            "max": ""
+                        }
+                    },
+                    "min": "",
+                    "max": "",
+                    "button_label": "Add Row",
                     "parent_repeater": "field_67ec7d30ea481"
                 }
             ]
@@ -134,5 +280,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743555999
+    "modified": 1743715427
 }

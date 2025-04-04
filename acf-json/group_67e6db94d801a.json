@@ -3,33 +3,6 @@
     "title": "BLOCK:  Split > Accordion",
     "fields": [
         {
-            "key": "field_67e6db94dbcb4",
-            "label": "Orientation",
-            "name": "orientation",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "choices": {
-                "l2r": "Left to Right",
-                "r2l": "Right to Left"
-            },
-            "default_value": "l2r",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 1,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_67e6db94dbcbc",
             "label": "Static",
             "name": "",
@@ -252,6 +225,48 @@
                     "parent_repeater": "field_67e6db94dbce8"
                 }
             ]
+        },
+        {
+            "key": "field_67eecbdae2637",
+            "label": "Styles",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67eece4b83f74",
+            "label": "Block Visuals",
+            "name": "block_visuals",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "clone": [
+                "field_67eecdbfdfce1"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -272,5 +287,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743182887
+    "modified": 1743703657
 }
