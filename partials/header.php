@@ -10,7 +10,15 @@ endif;
 ?>
 <section class="page__header project__header">
     <figure>
-        <?php the_post_thumbnail('full'); ?>
+        <?php if(is_home()): 
+            $newsID = get_option('page_for_posts', true);
+            $url = get_the_post_thumbnail_url($newsID, 'full');
+            if($url): ?>
+                <img src="<?php echo $url; ?>" alt="<?php echo get_the_title($newsID); ?>" />
+            <?php endif;
+        else:
+            the_post_thumbnail('full'); 
+        endif; ?>
     </figure>
     <div class="project__header--content">
         <div class="container--site">

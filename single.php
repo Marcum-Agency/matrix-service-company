@@ -12,7 +12,6 @@ if( have_posts() ):
     } ?>
     <article class="single">
         <?php the_content(); ?>
-
     </article>
     <?php endwhile;
 else:
