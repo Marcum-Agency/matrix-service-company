@@ -92,6 +92,13 @@ function wp_enqueue_scripts_msc(){
         date('Y-m-d'),
         true
     );
+    // wp_enqueue_script(
+    //     'ScrollMagic js',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js',
+    //     array( 'jquery' ),
+    //     date('Y-m-d'),
+    //     true
+    // );
 
 
 
