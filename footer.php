@@ -24,7 +24,7 @@
                     <a href='<?php the_field('youtube', 'options'); ?>' rel="nofollow" target="_blank" class='list-item-anchor--social'><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/youtube.svg' class='list-item-vector--social'></svg></a>
                 </li>
                 <li class='list-item--social'>
-                    <a href='<?php the_field('twitter', 'options'); ?>' rel="nofollow" target="_blank" class='list-item-anchor--social'><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/twitter.svg' class='list-item-vector--social'></svg></a>
+                    <a href='<?php the_field('twitterx', 'options'); ?>' rel="nofollow" target="_blank" class='list-item-anchor--social'><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/twitter.svg' class='list-item-vector--social'></svg></a>
                 </li>           
             </ul>
         </div>
