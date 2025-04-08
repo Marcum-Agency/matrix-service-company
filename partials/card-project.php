@@ -1,6 +1,6 @@
 <div <?php post_class('card'); ?>>
     <div class='card-image'>
-        <?php the_post_thumbnail('medium'); ?>
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
     </div>
     <div class='card-details'>
         <!-- Market -->
