@@ -175,7 +175,7 @@
                 },
                 {
                     "key": "field_67ee175c52a3f",
-                    "label": "Tab Content",
+                    "label": "Left Column",
                     "name": "tab_content",
                     "aria-label": "",
                     "type": "wysiwyg",
@@ -183,7 +183,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "100",
+                        "width": "48",
                         "class": "",
                         "id": ""
                     },
@@ -206,7 +206,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -249,14 +249,117 @@
                             "name": "accordion",
                             "label": "Accordion",
                             "display": "block",
-                            "sub_fields": [],
+                            "sub_fields": [
+                                {
+                                    "key": "field_67f4819b0fb05",
+                                    "label": "Accordion",
+                                    "name": "accordion_repeater",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "relevanssi_exclude": 0,
+                                    "layout": "block",
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "field_67f481b30fb06",
+                                    "button_label": "Add Accordion Group",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_67f481b30fb06",
+                                            "label": "Headline",
+                                            "name": "headline",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "100",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "relevanssi_exclude": 0,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_67f4819b0fb05"
+                                        },
+                                        {
+                                            "key": "field_67f481bd0fb07",
+                                            "label": "Content",
+                                            "name": "content",
+                                            "aria-label": "",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "100",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "relevanssi_exclude": 0,
+                                            "default_value": "",
+                                            "allow_in_bindings": 0,
+                                            "tabs": "visual",
+                                            "toolbar": "basic",
+                                            "media_upload": 0,
+                                            "delay": 0,
+                                            "parent_repeater": "field_67f4819b0fb05"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_67f481730fb02": {
+                            "key": "layout_67f481730fb02",
+                            "name": "form",
+                            "label": "Form",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_67f481800fb04",
+                                    "label": "Form Shortcode",
+                                    "name": "form_shortcode",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "relevanssi_exclude": 0,
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "[ninja_form id=1]",
+                                    "prepend": "",
+                                    "append": ""
+                                }
+                            ],
                             "min": "",
                             "max": ""
                         }
                     },
                     "min": "",
-                    "max": "",
-                    "button_label": "Add Row",
+                    "max": 1,
+                    "button_label": "Add Layout",
                     "parent_repeater": "field_67ec7d30ea481"
                 }
             ]
@@ -280,5 +383,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743715427
+    "modified": 1744078049
 }

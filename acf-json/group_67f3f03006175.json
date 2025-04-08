@@ -1,31 +1,9 @@
 {
-    "key": "group_67d8ac3a41e29",
-    "title": "BLOCK: Image Slots",
+    "key": "group_67f3f03006175",
+    "title": "Block > List Repeater",
     "fields": [
         {
-            "key": "field_67d8c70a14133",
-            "label": "Eyebrow Heading",
-            "name": "eyebrow_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67d8c70014132",
+            "key": "field_67f3f03026b9d",
             "label": "Heading",
             "name": "heading",
             "aria-label": "",
@@ -47,11 +25,55 @@
             "append": ""
         },
         {
-            "key": "field_67f3dc21d7a5e",
-            "label": "Slot Source",
-            "name": "slot_source",
+            "key": "field_67f3f76a24448",
+            "label": "Expanded Button Text",
+            "name": "expanded_button_text",
             "aria-label": "",
-            "type": "select",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67f3fc2771fd7",
+            "label": "Load All",
+            "name": "load_all",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No",
+            "ui": 1
+        },
+        {
+            "key": "field_67f3f04b26b9e",
+            "label": "List",
+            "name": "list_repeater",
+            "aria-label": "",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -61,101 +83,25 @@
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "choices": {
-                "page": "Page",
-                "custom": "Custom"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 1,
-            "ajax": 1,
-            "placeholder": ""
-        },
-        {
-            "key": "field_67ea1df3e4199",
-            "label": "Links",
-            "name": "links",
-            "aria-label": "",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67f3dc21d7a5e",
-                        "operator": "==",
-                        "value": "page"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "post_type": [
-                "page",
-                "market",
-                "project"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "return_format": "id",
-            "multiple": 1,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_67f3dc66d7a5f",
-            "label": "Custom Slots",
-            "name": "custom_slots",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67f3dc21d7a5e",
-                        "operator": "==",
-                        "value": "custom"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "layout": "table",
-            "pagination": 0,
+            "layout": "block",
+            "pagination": 1,
+            "rows_per_page": 5,
             "min": 0,
             "max": 0,
-            "collapsed": "field_67f3dc80d7a61",
-            "button_label": "Add Slot",
-            "rows_per_page": 20,
+            "collapsed": "field_67f3f07526ba0",
+            "button_label": "Add Item",
             "sub_fields": [
                 {
-                    "key": "field_67f3dc80d7a61",
-                    "label": "Slot Title",
-                    "name": "slot_title",
+                    "key": "field_67f3f07526ba0",
+                    "label": "Card Title",
+                    "name": "card_title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -166,24 +112,47 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_67f3dc66d7a5f"
+                    "parent_repeater": "field_67f3f04b26b9e"
                 },
                 {
-                    "key": "field_67f3dc74d7a60",
-                    "label": "Slot Background",
-                    "name": "slot_background",
+                    "key": "field_67f3f08226ba1",
+                    "label": "Subtitle",
+                    "name": "card_subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67f3f04b26b9e"
+                },
+                {
+                    "key": "field_67f3f06026b9f",
+                    "label": "Card Image",
+                    "name": "card_image",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
                     "relevanssi_exclude": 0,
-                    "return_format": "id",
+                    "return_format": "array",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -194,26 +163,30 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
-                    "parent_repeater": "field_67f3dc66d7a5f"
+                    "parent_repeater": "field_67f3f04b26b9e"
                 },
                 {
-                    "key": "field_67f3dc95d7a62",
-                    "label": "Slot Link",
-                    "name": "slot_link",
+                    "key": "field_67f3f0ac26ba2",
+                    "label": "Content",
+                    "name": "content",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "75",
                         "class": "",
                         "id": ""
                     },
                     "relevanssi_exclude": 0,
-                    "return_format": "url",
+                    "default_value": "",
                     "allow_in_bindings": 0,
-                    "parent_repeater": "field_67f3dc66d7a5f"
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_67f3f04b26b9e"
                 }
             ]
         }
@@ -223,7 +196,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "mrcm\/image-slots"
+                "value": "mrcm\/list-repeater"
             }
         ]
     ],
@@ -236,5 +209,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744037070
+    "modified": 1744121850
 }
