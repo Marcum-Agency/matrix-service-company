@@ -85,6 +85,11 @@ function wp_enqueue_scripts_msc(){
             'apiUrl' => admin_url( 'admin-ajax.php' )
         )
     );
+    wp_enqueue_script( 'ScrollMagic js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array( 'jquery' ), date('Y-m-d'), true );
+    wp_enqueue_script( 'animationgsap js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array( 'jquery' ), date('Y-m-d'), true );
+    wp_enqueue_script( 'scrollmagicindicators js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array( 'jquery' ), date('Y-m-d'), true );
+    wp_enqueue_script( 'gsap js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', array( 'jquery' ), date('Y-m-d'), true );
+    
     wp_enqueue_script(
         'custom js',
         get_template_directory_uri() . '/javascript/custom.js',
@@ -92,13 +97,8 @@ function wp_enqueue_scripts_msc(){
         date('Y-m-d'),
         true
     );
-    // wp_enqueue_script(
-    //     'ScrollMagic js',
-    //     'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js',
-    //     array( 'jquery' ),
-    //     date('Y-m-d'),
-    //     true
-    // );
+    
+    
 
 
 
