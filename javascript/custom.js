@@ -32,7 +32,7 @@ jQuery(document).ready(function () {
 /* Total Capabilities animation */
 
   var controller = new ScrollMagic.Controller();
-  var tween1 = TweenMax.staggerFromTo(".split-list .scroll-list li", 1, {opacity: 0}, {opacity: 100}, 1);
+  var tween1 = TweenMax.staggerFromTo(".split-list .scroll-list li", 1, {opacity: 50}, {opacity: 100}, 1);
   
   var scene = new ScrollMagic.Scene({triggerElement: ".split-list", duration: 200+"%",triggerHook: 0})
   .setPin(".split-list")
@@ -51,11 +51,6 @@ jQuery(document).ready(function () {
   var scene = new ScrollMagic.Scene({triggerElement: ".split-list", duration:170+"%",offset: 400})
   .setTween(tweenb)
   .addTo(controller);
-  
-  
-  
-  
-  
   
 
 /* image slot  animation */
@@ -80,7 +75,7 @@ if(jQuery( window ).width() > 1023){
 /* ctabox animation */
 
 var controller3 = new ScrollMagic.Controller();
-var tween3 = TweenMax.staggerFromTo(".block--cta-image-banner .media-wrapper img", 1, {opacity: 1}, {opacity: 0.2},1);
+var tween3 = TweenMax.staggerFromTo(".block--cta-image-banner .media-wrapper img", 1, {opacity: 1}, {opacity: 0.4},1);
 var tween4 = TweenMax.staggerFromTo(".block--cta-image-banner .content__inner", 1, {opacity: 0}, {opacity: 1},1);
 
 var scene3 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", duration: 200+"%",triggerHook: 0})
@@ -324,12 +319,12 @@ var scroller = new SmoothScroll({
 
 
 
-jQuery('.split-content .overflow-area+.js-expand').click(function(e) {
+/*jQuery('.split-content .overflow-area+.js-expand').click(function(e) {
 
 	jQuery('html, body').animate({
 		scrollTop: jQuery(this).parents('section.split-content').offset().top - 20
 	}, 500); 
     
-});
+});*/
 
 
