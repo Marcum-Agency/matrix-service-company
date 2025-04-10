@@ -36,7 +36,8 @@
                     "relevanssi_exclude": 0,
                     "choices": {
                         "link": "Link",
-                        "lightbox": "Lightbox"
+                        "lightbox": "Lightbox",
+                        "file": "File"
                     },
                     "default_value": "link",
                     "return_format": "value",
@@ -142,6 +143,36 @@
                             "new_lines": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_67f727789349a",
+                    "label": "File",
+                    "name": "file",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67a9bc5f76bb4",
+                                "operator": "==",
+                                "value": "file"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0
                 }
             ]
         }
@@ -151,7 +182,7 @@
             {
                 "param": "post",
                 "operator": "==",
-                "value": "199"
+                "value": "2856"
             }
         ]
     ],
@@ -164,5 +195,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743703484
+    "modified": 1744250812
 }
