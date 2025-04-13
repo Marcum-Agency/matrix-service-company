@@ -16,7 +16,6 @@ include_once get_template_directory() . '/inc/filters.php';
 /* --------------------------------------------------------- */
 /*  !Scripts */
 /* --------------------------------------------------------- */
-
 //DO NOT enqueue scripts in functions.php, use the enqueue_scripts function in inc/actions.php instead.
 
 /* --------------------------------------------------------- */
@@ -28,6 +27,7 @@ add_action_msc( array(
     'wp_enqueue_scripts'
 ) );
 remove_action( 'wp_head', 'webp_uploads_render_generator' );
+
 
 /* --------------------------------------------------------- */
 /*  !Filters */
