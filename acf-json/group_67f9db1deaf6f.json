@@ -1,0 +1,66 @@
+{
+    "key": "group_67f9db1deaf6f",
+    "title": "Featured Image Overlay",
+    "fields": [
+        {
+            "key": "field_67f9db1e7de3a",
+            "label": "Black Overlay",
+            "name": "black_overlay",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "choices": {
+                "opacity-80": "20%",
+                "opacity-60": "40%",
+                "opacity-40": "60%",
+                "opacity-20": "80%"
+            },
+            "default_value": "opacity-80",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "capability"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "market"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1744428527
+}

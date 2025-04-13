@@ -3,6 +3,28 @@
     "title": "BLOCK:  Split > Headline",
     "fields": [
         {
+            "key": "field_67d1d6bddc600",
+            "label": "Headline",
+            "name": "headline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_67d1d9a1d85d2",
             "label": "Static",
             "name": "",
@@ -20,6 +42,29 @@
             "placement": "top",
             "endpoint": 1,
             "selected": 0
+        },
+        {
+            "key": "field_67d1d6bddc659",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "clone": [
+                "field_67a9baf87bf6c"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_67d1d6bddc600",
@@ -310,7 +355,7 @@
                     "label": "Tab Content",
                     "name": "tab_content",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -321,11 +366,11 @@
                     },
                     "relevanssi_exclude": 0,
                     "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
+                    "allow_in_bindings": 1,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_67e55ec9788e3"
                 }
             ]
@@ -390,5 +435,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743709202
+    "modified": 1744384697
 }
