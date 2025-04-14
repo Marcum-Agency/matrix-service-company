@@ -5,16 +5,98 @@ get_template_part( 'partials/header' );
 
 
 ?>
+<style>
+.filter-container__inner {
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+    gap: 3rem;
+
+    .btn {
+        background: var(--color-green);
+        color: white;
+    }
+
+    .facetwp-input-wrap {
+        .facetwp-icon {
+            left: 0;
+            right: auto;
+        }
+
+        .facetwp-search{
+            padding-left: 30px;
+            padding-right: 0;
+            background: none;
+        }
+    }
+
+    .facetwp-facet {
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+    }
+
+    .single {
+        background: none;
+    }
+
+    .fs-label {
+        text-transform: uppercase;
+    }
+
+    .fs-label-wrap {
+        border: none;
+        background: none;
+    }
+
+    .fs-options {
+        box-shadow: 0 2px 15px rgba(0,0,0, .15);
+
+        .fs-option-label {
+            line-height: 1.4em;
+
+            &:hover {
+               color: var(--color-green);
+            }
+
+        }
+    }
+
+    .facetwp-type-sort {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 15px rgba(0,0,0, .15);
+        justify-content: center;
+
+        select {
+            background: none;
+        }
+
+    }
+}
+.filter-group {
+    flex: 1;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0,0,0, .15);
+
+}
+    </style>
 <div class="filter-container">
     <div class="container--site">
-        <div class="filter-container__inner--left">
-            <h1 class="filter-container__inner--left__title">Filter</h1>
+        <div class="filter-container__inner">
+                <div class="filter-group">
+                <?php echo facetwp_display( 'facet',"media_search" ); ?>
+                <?php echo facetwp_display( 'facet',"categories" ); ?>
+                <button value="Reset" onclick="FWP.reset()" class="btn facet-reset">Reset</button>
+            </div>
+            <?php echo facetwp_display( 'facet',"sort_" ); ?>
         </div>
-        <div class="filter-container__inner--right">
-            <?php echo do_shortcode( '[facetwp facet="search_blog"]' ); ?>
-            <?php echo do_shortcode( '[facetwp facet="categories"]' ); ?>
-            <button value="Reset" onclick="FWP.reset()" class="btn facet-reset">Reset</button>
-        </div>
+           
     </div>
 </div>
 <div class='container--site'>
@@ -31,7 +113,7 @@ get_template_part( 'partials/header' );
     </div>
     
 </div>
-<?php echo do_shortcode( '[facetwp facet="load_more"]' ); ?>
+<?php echo facetwp_display('facet','load_more'); ?>
 <div class="footer_blocks">
 <?php 
 echo do_blocks( 
