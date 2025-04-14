@@ -17,6 +17,37 @@ if (window.matchMedia("(max-width: 37.5em)").matches) {
     });
 }
 
+function lazyVideoLoader() {
+  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+
+          video.target.load();
+          video.target.classList.remove("lazy");
+          lazyVideoObserver.unobserve(video.target);
+        }
+      });
+    });
+
+    lazyVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  lazyVideoLoader();
+});
+
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("m-menu-close")) {
         document.querySelector(".mega-menu-wrapper")?.classList.remove("active");
@@ -203,6 +234,8 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
       });
     }
   };
+
+
 
   
 
