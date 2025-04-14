@@ -245,6 +245,28 @@
             "append": ""
         },
         {
+            "key": "field_67fb83778a5df",
+            "label": "Black Heading",
+            "name": "black_heading",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
             "key": "field_67ddb9e594ac6",
             "label": "Stats",
             "name": "",
@@ -435,5 +457,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744384697
+    "modified": 1744536482
 }
