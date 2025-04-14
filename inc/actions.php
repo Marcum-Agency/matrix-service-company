@@ -164,3 +164,13 @@ function generateBreadcrumb() {
     
     echo "<div class='breadcrumbs'>" . implode(' > ', $breadcrumb) . "</div>";
 }
+
+function my_acf_init() {
+    acf_update_setting('google_api_key', get_field('google_maps_api','options'));
+}
+add_action('acf/init', 'my_acf_init');
+
+add_filter( 'facetwp_gmaps_api_key', function( $api_key) {
+    return get_field('google_maps_api','options');
+  });
+  
