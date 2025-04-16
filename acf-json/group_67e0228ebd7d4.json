@@ -40,10 +40,10 @@
             },
             "relevanssi_exclude": 0,
             "choices": {
-                "pdm": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/Engineering.svg\">",
-                "nac": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/NAC.svg\">",
-                "service": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/Services.svg\">",
-                "applied": "<img src=\"\/wp-content\/themes\/matrix-service-company\/images\/Apptech.svg\">"
+                "pdm": "<img src=\"\/wp-content\/themes\/matrix-service-company\/assets\/img\/Engineering.svg\">",
+                "nac": "<img src=\"\/wp-content\/themes\/matrix-service-company\/assets\/img\/NAC.svg\">",
+                "service": "<img src=\"\/wp-content\/themes\/matrix-service-company\/assets\/img\/Services.svg\">",
+                "applied": "<img src=\"\/wp-content\/themes\/matrix-service-company\/assets\/img\/Apptech.svg\">"
             },
             "default_value": [],
             "return_format": "array",
@@ -143,5 +143,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743306245
+    "modified": 1744766169
 }

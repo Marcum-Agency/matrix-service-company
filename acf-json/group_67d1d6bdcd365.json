@@ -44,29 +44,6 @@
             "selected": 0
         },
         {
-            "key": "field_67d1d6bddc659",
-            "label": "CTA",
-            "name": "cta",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "clone": [
-                "field_67a9baf87bf6c"
-            ],
-            "display": "group",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
             "key": "field_67d1d6bddc600",
             "label": "Headline",
             "name": "headline",
@@ -457,5 +434,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744536482
+    "modified": 1744766884
 }
