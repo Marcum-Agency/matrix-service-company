@@ -1,12 +1,5 @@
 ( ( NAMESPACE, _ ) => {
 
-  /*document.addEventListener("click", function(event) {
-    if (event.target.closest(".has-megamenu .arrow")) {
-        document.querySelector(".mega-menu-wrapper")?.classList.add("active");
-        document.documentElement.classList.add("locked");
-    }
-});*/
-
 // Only add close button if viewport is less than 37.5em (600px)
 if (window.matchMedia("(max-width: 37.5em)").matches) {
     document.querySelectorAll(".mega-menu-wrapper .mega-menu").forEach(menu => {
@@ -64,10 +57,6 @@ const _initApp = app => {
   _.w[ NAMESPACE ] = new app();
 };
 
-
-
-
-
 const Block = class Block {
   constructor( blockWrapperElem, blockIdx, blockId ){
     this.id = `${blockId}-${blockIdx + 1}`;
@@ -91,10 +80,6 @@ const Block = class Block {
   };
 };
 
-
-
-
-
 const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
 
   constructor( ...args ){
@@ -103,10 +88,6 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
   };
 
 };
-
-
-
-
 
 ( _initApp )( class {
 
@@ -149,9 +130,8 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
     PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
       pageHeaderLink => pageHeaderLink.addEventListener( 'click', this.markActiveMegaMenuIndex.bind(this) )
     );
-
-      // Optional: Close the menu if clicking outside
-  document.addEventListener('click', this.handleOutsideClick.bind(this));
+    //Close the menu if clicking outside
+    document.addEventListener('click', this.handleOutsideClick.bind(this));
   };
   
   /**
@@ -183,18 +163,27 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
    * Mark the active mega menu index
    */
   markActiveMegaMenuIndex( clickEvt ){
+
+    console.log(clickEvt.currentTarget.classList)
+    //Anything under this width, and the mobile menu is used, so we exit.
+    if (window.matchMedia("(max-width: 37.5em)").matches || !clickEvt.currentTarget.classList.contains('has-megamenu')){
+      return;
+    }
+
+    const pageHeaderListItemElem = clickEvt.currentTarget;
     clickEvt.preventDefault(); // Stop link from navigating
     clickEvt.stopPropagation(); // Prevent document click handler
 
 
 
-    const pageHeaderListItemElem = clickEvt.currentTarget;
-
+    
+    //If the item we clicked allready has "is-active", close the menu
     if( pageHeaderListItemElem.classList.contains('is-active') ){
 
       PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
         pageHeaderLink => pageHeaderLink.classList.remove('is-active')
       );
+      document.body.classList.remove("locked");
 
       document.querySelectorAll('#mega-menu-wrapper .is-active').forEach(el => {
         el.classList.remove('is-active');
@@ -202,11 +191,13 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
 
     } else {
 
+      //If another item has the active class, remove it so we can add it to this one.
       PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
         pageHeaderLink => pageHeaderLink.classList.remove('is-active')
       );
 
       pageHeaderListItemElem.classList.add('is-active');
+      document.body.classList.add("locked");
     }
    
 
@@ -229,16 +220,13 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
         pageHeaderLink => pageHeaderLink.classList.remove('is-active')
       );
 
+      document.body.classList.remove("locked");
+
       document.querySelectorAll('#mega-menu-wrapper .is-active').forEach(el => {
         el.classList.remove('is-active');
       });
     }
   };
-
-
-
-  
-
   /**
    *  Enqueue custom MSC "Blocks"
    */
@@ -268,12 +256,4 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
 
 });
 
-
-
-
-
 })( MAGIC.appName || "App", MRCM || {} );
-
-
-
-

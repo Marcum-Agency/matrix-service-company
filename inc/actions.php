@@ -25,15 +25,13 @@ function wp_enqueue_scripts_msc(){
         array(),
         null
     );
-    /*wp_enqueue_style(
-        'msc-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,600;1,300;1,600&family=Barlow:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap',
-        array(),
-        null
-    );*/
     wp_enqueue_style(
         'style',
         get_template_directory_uri() . '/style.css?v=' .rand(10000, 99999)
+    );
+    wp_enqueue_style(
+        'style-gs',
+        get_template_directory_uri() . '/style--gs.css?v=' .rand(10000, 99999)
     );
     wp_enqueue_style(
         'blame',
@@ -51,14 +49,14 @@ function wp_enqueue_scripts_msc(){
     );
     wp_enqueue_script(
         'mrcm',
-        get_template_directory_uri(). '/javascript/mrcm.js?v' .rand(10000, 99999),
+        get_template_directory_uri(). '/assets/js/mrcm.js?v' .rand(10000, 99999),
         array(),
         false,
         true
     );
     wp_enqueue_script(
         'app',
-        get_template_directory_uri(). '/javascript/app.js?v' .rand(10000, 99999),
+        get_template_directory_uri(). '/assets/js/app.js?v' .rand(10000, 99999),
         array( 'mrcm' ),
         false,
         true
@@ -72,7 +70,7 @@ function wp_enqueue_scripts_msc(){
     );   
     wp_enqueue_script(
         'odometer',
-        get_template_directory_uri(). '/javascript/odometer.min.js?v' .rand(10000, 99999),
+        get_template_directory_uri(). '/assets/js/odometer.min.js?v' .rand(10000, 99999),
         array(),
         false,
         true
@@ -92,7 +90,7 @@ function wp_enqueue_scripts_msc(){
     
     wp_enqueue_script(
         'custom js',
-        get_template_directory_uri() . '/javascript/custom.js',
+        get_template_directory_uri() . '/assets/js/custom.js',
         array( 'jquery' ),
         date('Y-m-d'),
         true

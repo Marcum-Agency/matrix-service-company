@@ -4,34 +4,6 @@ jQuery(document).on("click", ".header--site .nav-menu-item .arrow" , function() 
 	jQuery('html').toggleClass('locked');
 });
 
-
-
-
-/*jQuery('.accordion h3').click(function(e) {
-    jQuery(this).parent('.accordion_group').siblings().find('.accordion-panel').hide();
-    jQuery(this).next('.accordion-panel').slideToggle();
-});*/
-
-/*
-jQuery(document).ready(function () {
-  jQuery(".accordion h3").click(function () {
-    jQuery(this)
-      .toggleClass("active")
-      .next(".accordion_group")
-      .slideToggle()
-      .parent()
-      .siblings()
-      .find(".accordion_group")
-      .slideUp()
-      .prev()
-      .removeClass("active");
-  });
-});
-*/
-
-
-
-
 /* Total Capabilities animation */
 
 const controller = new ScrollMagic.Controller();
@@ -243,6 +215,29 @@ jQuery(document).ready(function(){
       };
     });
   });
+
+
+
+/*id*/
+  jQuery(window).scroll(function(){
+    jQuery("[data-class='reveal']").each(function(){
+      var x = jQuery(window).scrollTop() + jQuery(window).height();
+
+
+			if (jQuery(window).width() < 768) {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 4);
+			}
+			else {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 2);
+			}
+
+      if (x >= y) {
+        jQuery(this).addClass('reveal_visible');
+      };
+    });
+  });
+
+
 });
 
 
@@ -411,4 +406,8 @@ jQuery(document).ready(function() {
 
 
 
+
+setTimeout(function () {
+	jQuery('.view--contact .category-tab-block .nf-field-element input[type=checkbox]').after('<span class="checkbox_label"></span>');
+}, 1000);
 
