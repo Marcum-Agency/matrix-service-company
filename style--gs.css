@@ -1,0 +1,20 @@
+/**
+ *
+ *  Home page "Projects" carousel/slider
+ *
+ */
+@media (min-width:768px) {
+
+    .mega-menu-wrapper .mega-menu,
+    .container--site {
+        inline-size: 89%;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        inline-size: 100%;
+        /* was 75,but it was causing it to be uneven. not sure why? - CB */
+    }
+}
