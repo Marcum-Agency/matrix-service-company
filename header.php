@@ -63,7 +63,7 @@
                 'menu_class' => 'nav-header__list nav-header--site__list',
                 'item_spacing' => 'discard',
 				'after' => '<span class="arrow">arrow</span>',
-                'items_wrap' => '<a href="/" class="escape-hatch"><svg data-src="'. get_stylesheet_directory_uri() .'/svgs/logo.svg" class="logo--header dark"></svg><svg data-src="'. get_stylesheet_directory_uri() .'/svgs/logo--reversed.svg" class="logo--header light"></svg></a><ul role="list" id="%1$s" class="%2$s">%3$s</ul><button onclick="this.parentElement.classList.toggle(\'is-engaged\')" id="trigger-mega-menu" class="btn--naked"><span></span><svg data-src="'. get_stylesheet_directory_uri() .'/svgs/font-awesome/bars--solid.svg"></svg></button>'
+                'items_wrap' => '<a href="/" class="escape-hatch"><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo.svg" class="logo--header dark"></svg><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo--reversed.svg" class="logo--header light"></svg></a><ul role="list" id="%1$s" class="%2$s">%3$s</ul><button onclick="this.parentElement.classList.toggle(\'is-engaged\')" id="trigger-mega-menu" class="btn--naked"><span></span><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/font-awesome/bars--solid.svg"></svg></button>'
             )
         );echo PHP_EOL; ?>
     </div><?php echo get_mega_menus(); ?>

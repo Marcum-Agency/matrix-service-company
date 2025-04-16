@@ -12,19 +12,19 @@
         <div class="footer--site__social">
             <ul role='list' class='list--social'>
                 <li class='list-item--social'>
-                    <a href='<?php the_field('linkedin', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Visit Matrix Service Company on Linkedin"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/linkedin.svg' class='list-item-vector--social' ></svg></a>
+                    <a href='<?php the_field('linkedin', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Visit Matrix Service Company on Linkedin"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/linkedin.svg' class='list-item-vector--social' ></svg></a>
                 </li>
                 <li class='list-item--social'>
-                    <a href='<?php the_field('facebook', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Facebook"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/facebook.svg' class='list-item-vector--social' ></svg></a>
+                    <a href='<?php the_field('facebook', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Facebook"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/facebook.svg' class='list-item-vector--social' ></svg></a>
                 </li>
                 <li class='list-item--social'>
-                    <a href='<?php the_field('instagram', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Instagram"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/instagram.svg' class='list-item-vector--social' ></svg></a>
+                    <a href='<?php the_field('instagram', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Instagram"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/instagram.svg' class='list-item-vector--social' ></svg></a>
                 </li>
                 <li class='list-item--social'>
-                    <a href='<?php the_field('youtube', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Subscribe to Matrix Service Company on Youtube"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/youtube.svg' class='list-item-vector--social' ></svg></a>
+                    <a href='<?php the_field('youtube', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Subscribe to Matrix Service Company on Youtube"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/youtube.svg' class='list-item-vector--social' ></svg></a>
                 </li>
                 <li class='list-item--social'>
-                    <a href='<?php the_field('twitterx', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Twitter/X"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/svgs/font-awesome/twitter.svg' class='list-item-vector--social' ></svg></a>
+                    <a href='<?php the_field('twitterx', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Twitter/X"><svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/twitter.svg' class='list-item-vector--social' ></svg></a>
                 </li>           
             </ul>
         </div>
