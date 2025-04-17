@@ -405,3 +405,46 @@ setTimeout(function () {
 	jQuery('.view--contact .category-tab-block .nf-field-element input[type=checkbox]').after('<span class="checkbox_label"></span>');
 }, 1000);
 
+
+
+/*for post quote*/
+jQuery(".archive-container.testimony-archive article.testimony").addClass('reveal');
+
+  jQuery(window).scroll(function(){
+    jQuery(".archive-container.testimony-archive article.testimony").each(function(){
+      var x = jQuery(window).scrollTop() + jQuery(window).height();
+
+
+			if (jQuery(window).width() < 768) {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 4);
+			}
+			else {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 2);
+			}
+
+      if (x >= y) {
+        jQuery(this).addClass('reveal_visible');
+      };
+    });
+  });
+
+
+
+
+  jQuery(window).scroll(function(){
+    jQuery(".single--post .single blockquote").each(function(){
+      var x = jQuery(window).scrollTop() + jQuery(window).height();
+
+
+			if (jQuery(window).width() < 768) {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 4);
+			}
+			else {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 2);
+			}
+
+      if (x >= y) {
+        jQuery(this).addClass('animate_quote');
+      };
+    });
+  });

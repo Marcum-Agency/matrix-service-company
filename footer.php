@@ -53,7 +53,5 @@
         Instead, enqueue them the "WordPress way" via the
         ./inc/actions.php script like the others have been added. */
 wp_footer(); ?>
-
-
 </body>
 </html>
