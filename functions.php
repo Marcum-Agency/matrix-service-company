@@ -42,6 +42,9 @@ add_filter_msc( array(
     [ 'nav_menu_link_attributes', 10, 4 ],
     'wp_img_tag_add_auto_sizes',
     [ 'wp_nav_menu_container_allowedtags', 10, 1 ],
-    ['get_the_archive_title', 10, 2]
+    ['get_the_archive_title', 10, 2],
+    ['facetwp_map_marker_args', 10, 2],
+    ['facetwp_map_init_args',10,2],
+    ['facetwp_query_args', 10,2]
 ) );
 remove_filter( 'wp_robots', 'wp_robots_max_image_preview_large' );

@@ -6,11 +6,24 @@
  */	
 $location_name = get_field('location_name', get_the_ID()) ?: 'Set Location Type';
 $address = get_field('address', get_the_ID() );
-$readable_address = $address['street_number'] . " " . $address['street_name'] . " | " . $address['city'] . "," . $address['state_short'] . " " . $address['post_code'];
+if($address):
+    if($address['country'] == "United States"):
+        $readable_address = $address['street_number'] . " " . $address['street_name'] . " | " . $address['city'] . ", " . $address['state_short'] . " " . $address['post_code'];
+    else:
+        $readable_address = $address['address'];
+    endif;
+else:
+    $readable_address = 'Set Address';
+endif;
+
 $phone = get_field('phone_number', get_the_ID());
 if($phone):
     $phone = $phone->toArray();
-    $output_number = "<a href={$phone['uri']} >{$phone['national']}</a>";
+    if($phone['country'] == "United States"):
+        $output_number = "<a href={$phone['uri']} >{$phone['national']}</a>";
+    else: 
+        $output_number = "<a href={$phone['uri']} >{$phone['international']}</a>";
+    endif;  
 else: 
     $output_number = "No Number Available";
 endif;
@@ -24,33 +37,3 @@ endif;
     </address>
     <?php echo $output_number; ?>
 </div>
-
-<style>
-.type-location {
-    margin-bottom: 2rem;
-    padding: 1em;
-
-    .location_type {
-        text-transform: uppercase;
-        color: var(--color-green);
-        font-size: 18px;
-        display: inline-block;
-    }
-
-    h3 {
-        font-size: 36px;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
-    }
-
-    address {
-        font-style: normal;
-    }
-
-    a {
-        color: black;
-        text-decoration: none;
-    }
-}
-
-</style>
