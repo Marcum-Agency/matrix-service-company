@@ -49,6 +49,7 @@ new ScrollMagic.Scene({
   triggerHook: 0.5,
   offset: 0,
   duration: scrollPerItem
+
 })
 .on("leave", (event) => {
   if (event.scrollDirection === "REVERSE") {
@@ -89,17 +90,17 @@ var controller3 = new ScrollMagic.Controller();
 var tween3 = TweenMax.staggerFromTo(".block--cta-image-banner .media-wrapper img", 1, {opacity: 1}, {opacity: 0.4},1);
 var tween4 = TweenMax.staggerFromTo(".block--cta-image-banner .content__inner", 1, {opacity: 0}, {opacity: 1},1);
 
-var scene3 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", duration: 200+"%",triggerHook: 0})
+var scene3 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", duration: 60+"%",triggerHook: 0})
 .setPin(".block--cta-image-banner")
 //.addIndicators({name: "1 (duration: 100)"})
 .addTo(controller3);
 
 
-var scene3 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", duration:400+"%",offset: 100})
+var scene3 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", duration:120+"%",offset: 400})
 .setTween(tween3)              
 .addTo(controller3);
 
-var scene4 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", duration:400+"%",offset: 400})
+var scene4 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", duration:120+"%",offset: 400})
 .setTween(tween4)              
 .addTo(controller3);
 
@@ -108,7 +109,7 @@ var scene4 = new ScrollMagic.Scene({triggerElement: ".block--cta-image-banner", 
 
 /* Total Capabilities animation */
 
-jQuery(window).on("scroll", () => {
+/*jQuery(window).on("scroll", () => {
   jQuery(".mrcm-block").each(function() {
     var offset = jQuery(this).offset().top - jQuery(window).scrollTop();
     if (offset <= 0) {
@@ -128,7 +129,7 @@ jQuery(window).on("scroll", () => {
     }
   })
 }).trigger("scroll")
-
+*/
 
 /* all elements */
 jQuery(window).on("scroll", () => {
@@ -192,6 +193,28 @@ jQuery(window).click(function() {
 
 
 jQuery(document).ready(function(){
+  
+  /*animate_arrow*/
+  jQuery(window).scroll(function(){
+    jQuery(".mrcm-block").each(function(){
+      var x = jQuery(window).scrollTop() + jQuery(window).height();
+
+
+			if (jQuery(window).width() < 768) {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 4);
+			}
+			else {
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 1.5);
+			}
+
+      if (x >= y) {
+        jQuery(this).addClass('animate_arrow');
+      };
+    });
+  });
+  
+  
+  
   jQuery(window).scroll(function(){
     jQuery(".reveal").each(function(){
       var x = jQuery(window).scrollTop() + jQuery(window).height();
@@ -201,7 +224,7 @@ jQuery(document).ready(function(){
 			  var y = jQuery(this).offset().top + (jQuery(this).height() / 4);
 			}
 			else {
-			  var y = jQuery(this).offset().top + (jQuery(this).height() / 2);
+			  var y = jQuery(this).offset().top + (jQuery(this).height() / 2.5);
 			}
 
       if (x >= y) {
