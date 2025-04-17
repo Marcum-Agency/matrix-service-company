@@ -7,7 +7,7 @@
             "label": "Location Name",
             "name": "location_name",
             "aria-label": "",
-            "type": "text",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,12 +17,20 @@
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "choices": {
+                "Regional Office": "Regional Office",
+                "International Office": "International Office",
+                "Fabrication Facility": "Fabrication Facility",
+                "Corporate Headquarters": "Corporate Headquarters"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_67fc77887ce1f",
@@ -85,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744644678
+    "modified": 1744847039
 }
