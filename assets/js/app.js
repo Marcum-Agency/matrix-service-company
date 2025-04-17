@@ -1,5 +1,7 @@
 ( ( NAMESPACE, _ ) => {
 
+
+
 // Only add close button if viewport is less than 37.5em (600px)
 if (window.matchMedia("(max-width: 37.5em)").matches) {
     document.querySelectorAll(".mega-menu-wrapper .mega-menu").forEach(menu => {
@@ -8,6 +10,27 @@ if (window.matchMedia("(max-width: 37.5em)").matches) {
         closeButton.textContent = "x";
         menu.parentNode.insertBefore(closeButton, menu);
     });
+
+    document.addEventListener("click", function(event) {
+      const arrow = event.target.closest(".header--site .has-megamenu a");
+      if (arrow) {
+        arrow.parentElement.classList.toggle("activate");
+        const subMenu = arrow.parentElement.querySelector(".sub-menu");
+        if (subMenu && subMenu.classList.contains("sub-menu")) {
+          subMenu.classList.toggle("active");
+        }
+        document.body.classList.toggle("locked");
+      }
+    });
+} else {
+  //Since We're not on Mobile, Add the chevron to links that have mega-menu.
+  document.querySelectorAll('li.has-megamenu > a').forEach(link => {
+    const chevron = document.createElement('i');
+    chevron.classList.add('fa-chevron-down'); // Add a class for styling
+    chevron.classList.add('fa');
+    chevron.innerHTML = ""; // You can swap this out with an icon if needed
+    link.appendChild(chevron);
+  });
 }
 
 function lazyVideoLoader() {
