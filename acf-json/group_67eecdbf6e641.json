@@ -38,7 +38,7 @@
                         "l2r": "Left to Right",
                         "r2l": "Right to Left"
                     },
-                    "default_value": "l2r",
+                    "default_value": "",
                     "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
@@ -101,9 +101,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post",
                 "operator": "==",
-                "value": "post"
+                "value": "2856"
             }
         ]
     ],
@@ -116,5 +116,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743712754
+    "modified": 1744989413
 }
