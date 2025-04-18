@@ -1167,6 +1167,7 @@ green : #6CB640
     .location {
       display: block;
       font-size: 24px;
+      font-weight: 300;
     }
 
     date {
@@ -1755,7 +1756,8 @@ a:hover {
 }
 
 .split-content ul {
-  list-style-position: inside;
+  /*list-style-position: inside;*/
+  padding-left: 15px;
 }
 
 .split-content li {
@@ -2139,12 +2141,28 @@ body:before {
   font-size: 55px;
 }
 
-.split-content .split-content__child li,
+.split-content .dynamic-child p,
+.split-content .dynamic-child li,
+.split-content .split-content__child p,
+.split-content .split-content__child li {
+  font-size: 18px;
+  line-height: 1.25;
+  text-transform: none;
+  font-weight: normal;
+  color: initial;
+}
+
+.split-content .split-content__child li {
+  margin-bottom: 5px;
+}
+
 .split-content .split-content__child p {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 1.6rem;
   max-width: 480px;
+
+
 }
 
 .split-content.auto-height .split-content__child.static-child {
@@ -4622,11 +4640,7 @@ select:focus {
   color: #fff;
 }
 
-#facetwp-map {
-  >div {
-    background: black !important;
-  }
-}
+
 
 /*responsive*/
 
@@ -6197,6 +6211,13 @@ select:focus {
 .split-content.l2r .split-content__child.static-child:before {  content: ''; position: absolute; width: calc(100% + 40px); height: 280px; left: -20px; bottom: 0px; background: url(assets/img/mob-shape-new.png) center bottom no-repeat; background-size: 100% 100%; min-height: auto; }
 */
 
+  .split-accordion .static-child .headline {
+    text-align: center;
+  }
+
+  .accordion-panel {
+    text-align: left;
+  }
 
 
 
