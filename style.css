@@ -4564,6 +4564,12 @@ select:focus {
   }
 }
 
+#facetwp-map {
+  >div {
+    background: black !important;
+  }
+}
+
 /*responsive*/
 
 @media screen and (max-width:1919px) {
@@ -6100,11 +6106,29 @@ select:focus {
   }
 
 
-.split-content.flexible-arrow-mob { background-image:none; }
-.split-content.flexible-arrow-mob .split-content__child.dynamic-child { margin-bottom: 30px; padding-bottom: 250px; position: relative; }
-.split-content.flexible-arrow-mob .split-content__child.dynamic-child:after { content: ''; position: absolute; width: calc(100% + 40px); height: 280px; left: -20px; bottom: 0px; background: url(assets/img/mob-shape-new.png) center bottom no-repeat; background-size: 100% 100%; min-height: auto; }
+  .split-content.flexible-arrow-mob {
+    background-image: none;
+  }
 
-/*
+  .split-content.flexible-arrow-mob .split-content__child.dynamic-child {
+    margin-bottom: 30px;
+    padding-bottom: 250px;
+    position: relative;
+  }
+
+  .split-content.flexible-arrow-mob .split-content__child.dynamic-child:after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 40px);
+    height: 280px;
+    left: -20px;
+    bottom: 0px;
+    background: url(assets/img/mob-shape-new.png) center bottom no-repeat;
+    background-size: 100% 100%;
+    min-height: auto;
+  }
+
+  /*
 .split-content.r2l, 
 .split-content.l2r { background-image:none; }
 
@@ -7415,7 +7439,9 @@ select:focus {
   }
 
 
-.slider-block { min-height:inherit; }
+  .slider-block {
+    min-height: inherit;
+  }
 
 
 
@@ -8060,8 +8086,15 @@ select:focus {
     height: 120px;
   }
 
-.split-content.flexible-arrow-mob .split-content__child.dynamic-child { padding-top:20px; min-height:inherit; padding-bottom: 120px; }
-.split-content.flexible-arrow-mob .split-content__child.dynamic-child:after { height: 120px; }
+  .split-content.flexible-arrow-mob .split-content__child.dynamic-child {
+    padding-top: 20px;
+    min-height: inherit;
+    padding-bottom: 120px;
+  }
+
+  .split-content.flexible-arrow-mob .split-content__child.dynamic-child:after {
+    height: 120px;
+  }
 
 
 }
