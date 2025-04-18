@@ -1606,7 +1606,8 @@ green : #6CB640
   }
 
 
-  .stat__container .stat__number {
+  .stat__container .stat__number,
+  .stat__container .stat__append {
     font-size: 40px;
     padding-left: 5px;
 
@@ -1628,7 +1629,9 @@ green : #6CB640
   justify-content: space-between;
   align-items: flex-start;
 
-  .stat__number {
+  .stat__number,
+  .stat__append,
+  .stat__prepend {
     font-size: 40px;
     font-weight: bold;
     display: block;
@@ -2136,6 +2139,7 @@ body:before {
   font-size: 55px;
 }
 
+.split-content .split-content__child li,
 .split-content .split-content__child p {
   font-size: 18px;
   line-height: 30px;
@@ -2625,15 +2629,16 @@ article.single .split-content .container--site {
 /*stats-block*/
 .stats-block .container--site {
   max-width: 1550px;
-}
 
-.stats-block .stat__container .stat__number {
-  line-height: 1;
-}
+  .stat__number {
+    line-height: 1;
+  }
 
-.stats-block .stat__container .stat__label {
-  letter-spacing: 0.04em;
-  padding-top: 5px;
+  .stat__label {
+    letter-spacing: 0.04em;
+    padding-top: 5px;
+  }
+
 }
 
 /*split-bullet*/
@@ -3417,6 +3422,12 @@ button {
   max-width: 33.33%;
 }
 
+.stats-block .stat__container .stat__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 
 
 .view--projects .wp-container-core-group-is-layout-1 {
@@ -3592,10 +3603,6 @@ button {
   font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.view--contact .category-tab-block .category-tab__tabs .automatic {
-  padding-top: 710px;
 }
 
 .view--contact .category-tab-block [role="tabpanel"] .parent-category__description {
@@ -3790,6 +3797,31 @@ button {
 }
 
 .custom-tabs {
+
+  .category-tab__tabs .automatic {
+    padding-top: 0;
+  }
+
+  h1 {
+    padding-top: 710px;
+    color: white;
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 50px;
+
+    @media (max-width: 767px) {
+      padding-top: 250px;
+    }
+
+    @media (max-width: 1279px) {
+      padding-top: 300px;
+    }
+
+    @media screen and (max-width: 1599px) {
+      padding-top: 400px;
+    }
+  }
+
   .children-category__list {
     display: block;
 
@@ -3805,14 +3837,26 @@ button {
     a {
       color: var(--color-green);
       text-decoration: underline;
+      padding: 0.25rem 0 !important;
+      margin: 0 !important;
+      border: 0;
+      display: inline-block;
+      width: auto !important;
+      min-height: auto !important;
+
+      &:hover {
+        background-color: none;
+        color: #6CB640;
+        box-shadow: none;
+
+
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 }
-
-
-/*.view--contact .category-tab-block .category-tab__tabs .container--site { overflow:auto; transform: translate(0px, 10px); -webkit-transform: translate(0px, 10px); }
-.view--contact .category-tab-block .category-tab__tabs .category-tab__tab-list { width: 2000px; }
-*/
 
 body.locked {
   overflow: hidden;
@@ -4570,6 +4614,20 @@ select:focus {
   }
 }
 
+/*18-4*/
+.header--site .nav-menu-item.btn.active>a,
+.header--site .nav-menu-item.btn a:hover {
+  border-color: var(--color-green);
+  background-color: var(--color-green);
+  color: #fff;
+}
+
+#facetwp-map {
+  >div {
+    background: black !important;
+  }
+}
+
 /*responsive*/
 
 @media screen and (max-width:1919px) {
@@ -4804,7 +4862,6 @@ select:focus {
 
 
   .view--contact .category-tab-block .category-tab__tabs .automatic {
-    padding-top: 400px;
     gap: 0.5rem;
   }
 
@@ -5225,7 +5282,6 @@ select:focus {
   }
 
   .view--contact .category-tab-block .category-tab__tabs .automatic {
-    padding-top: 300px;
     gap: 0.2rem;
   }
 
@@ -6486,6 +6542,11 @@ select:focus {
     color: #6CB640;
   }
 
+  .header--site .nav-header__list>li.nav-menu-item.btn:hover>a,
+  .header--site .nav-header__list>li.nav-menu-item.btn.active>a {
+    background-color: transparent;
+    color: #6CB640;
+  }
 
 
 
@@ -6827,7 +6888,8 @@ select:focus {
     gap: 0;
   }
 
-  .stats-block .stat__container .stat .stat__number {
+  .stats-block .stat__container .stat .stat__number,
+  .stats-block .stat__container .stat .stat__append {
     text-align: left;
     display: block;
     font-size: 70px;
@@ -7225,10 +7287,6 @@ select:focus {
 
   .facetwp-template[data-name="testimonials"]+.facetwp-facet.facetwp-facet-load_more {
     padding-bottom: 60px;
-  }
-
-  .view--contact .category-tab-block .category-tab__tabs .automatic {
-    padding-top: 250px;
   }
 
   .view--contact .category-tab-block [role="tabpanel"] {
