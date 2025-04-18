@@ -18,12 +18,16 @@ endif;
 
 $phone = get_field('phone_number', get_the_ID());
 if($phone):
-    $phone = $phone->toArray();
-    if($phone['country'] == "United States"):
-        $output_number = "<a href={$phone['uri']} >{$phone['national']}</a>";
-    else: 
-        $output_number = "<a href={$phone['uri']} >{$phone['international']}</a>";
-    endif;  
+    if ( !is_array($phone) && method_exists($phone, 'toArray')) {
+        $phone = $phone->toArray();
+        if($phone['country'] == "United States"):
+            $output_number = "<a href={$phone['uri']} >{$phone['national']}</a>";
+        else: 
+            $output_number = "<a href={$phone['uri']} >{$phone['international']}</a>";
+        endif;  
+    } else {
+        $output_number = 'Error With Phone Number';
+    }
 else: 
     $output_number = "No Number Available";
 endif;
