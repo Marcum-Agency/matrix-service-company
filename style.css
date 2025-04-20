@@ -1628,7 +1628,7 @@ green : #6CB640
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
 
   .stat__number,
   .stat__append,
@@ -1924,7 +1924,7 @@ body:before {
   letter-spacing: 0.08em;
 }
 
-#hero-slider h2 {
+#hero-slider .slide_title {
   font-size: 72px;
   line-height: 1;
   letter-spacing: 0.04em;
@@ -2148,7 +2148,7 @@ body:before {
   font-size: 18px;
   line-height: 1.25;
   text-transform: none;
-  font-weight: normal;
+  font-weight: 300;
   color: initial;
 }
 
@@ -2518,6 +2518,7 @@ body:before {
 
 .category-tab-block [role="tabpanel"] {
   background: none;
+  cursor: inherit;
 }
 
 .category-tab-block .category-tab__content-description {
@@ -2761,7 +2762,7 @@ article.single .split-content .container--site {
   color: black;
   display: block;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   position: relative;
@@ -3095,21 +3096,21 @@ button {
   max-width: 580px;
 }
 
-.view--capabilities #hero-slider h2 strong {
+.view--capabilities #hero-slider .slide_title strong {
   position: absolute;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
 
-.view--capabilities #hero-slider h2 strong.active {
+.view--capabilities #hero-slider .slide_title strong.active {
   opacity: 100;
   position: relative;
   opacity: 100;
   visibility: visible;
 }
 
-.view--capabilities #hero-slider h2 strong:last-child {
+.view--capabilities #hero-slider .slide_title strong:last-child {
   transition: all 0s;
 }
 
@@ -4612,7 +4613,7 @@ select:focus {
 .map-pin-modal {
   span {
     color: var(--color-green);
-    font-weight: normal;
+    font-weight: 300;
     text-transform: uppercase;
   }
 
@@ -4682,27 +4683,15 @@ select:focus {
 }
 
 @media screen and (max-width:1599px) {
-
-
-
-
-
-
   .nav--header--site {
     padding-block: 2rem;
   }
 
   .project__header .project__header--info h1,
   .block--cta-image-banner .headline,
-  #hero-slider h2 {
+  #hero-slider .slide_title {
     font-size: 60px;
   }
-
-  /*
-.split-content .split-content__child.static-child,
-.split-content .split-content__child { padding-left:3%; }
-.split-content.r2l .split-content__child { padding-left: 3%; }
-*/
 
   .split-content.r2l .split-content__child.static-child {
     padding-left: 3%;
@@ -4815,7 +4804,7 @@ select:focus {
   .project__header .project__header--info h1,
   .block--cta-image-banner .headline,
   .block--cta-image-banner .headline,
-  #hero-slider h2 {
+  #hero-slider .slide_title {
     font-size: 52px;
   }
 
@@ -4984,7 +4973,7 @@ select:focus {
 
   .project__header .project__header--info h1,
   .block--cta-image-banner .headline,
-  #hero-slider h2 {
+  #hero-slider .slide_title {
     font-size: 50px;
     letter-spacing: 0;
   }
@@ -5428,7 +5417,7 @@ select:focus {
 
   .project__header .project__header--info h1,
   .block--cta-image-banner .headline,
-  #hero-slider h2 {
+  #hero-slider .slide_title {
     font-size: 35px;
   }
 
