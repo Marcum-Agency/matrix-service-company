@@ -37,6 +37,10 @@ function wp_enqueue_scripts_msc(){
         'blame',
         get_template_directory_uri() . '/blame.css'
     );
+	 wp_enqueue_style(
+        'style2',
+        get_template_directory_uri() . '/assets/css/metrix-style.css'
+    );
     wp_enqueue_script(
         'svg-loader',
         'https://unpkg.com/external-svg-loader@latest/svg-loader.min.js',
