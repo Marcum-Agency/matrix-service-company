@@ -12,15 +12,15 @@ if (window.matchMedia("(max-width: 37.5em)").matches) {
     });
 
     document.addEventListener("click", function(event) {
-      const arrow = event.target.closest(".header--site .has-megamenu a");
-      if (arrow) {
-        arrow.parentElement.classList.toggle("activate");
-        const subMenu = arrow.parentElement.querySelector(".sub-menu");
-        if (subMenu && subMenu.classList.contains("sub-menu")) {
-          subMenu.classList.toggle("active");
-        }
-        document.body.classList.toggle("locked");
-      }
+      const trigger = event.target.closest(".header--site .has-megamenu a, .header--site .has-megamenu span");
+      if (!trigger) return;
+     
+      trigger.parentElement.classList.toggle("activate");
+      const subMenu = trigger.parentElement.querySelector(".sub-menu");
+      subMenu?.classList.toggle("active");
+
+      document.body.classList.toggle("locked");
+
     });
 } else {
   //Since We're not on Mobile, Add the chevron to links that have mega-menu.
@@ -155,6 +155,15 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
     );
     //Close the menu if clicking outside
     document.addEventListener('click', this.handleOutsideClick.bind(this));
+    document.querySelectorAll('[data-bs-dismiss="mega"]').forEach(closeButton => {
+      closeButton.addEventListener('click', this.closeMegaMenu.bind(this));
+    });
+    document.addEventListener('facetwp-loaded', function() {
+      if ( ! FWP.loaded ) {
+        fUtil('.facetwp-type-sort select').fSelect( { showSearch: false } );
+      }
+    });
+
   };
   
   /**
@@ -186,8 +195,6 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
    * Mark the active mega menu index
    */
   markActiveMegaMenuIndex( clickEvt ){
-
-    console.log(clickEvt.currentTarget.classList)
     //Anything under this width, and the mobile menu is used, so we exit.
     if (window.matchMedia("(max-width: 37.5em)").matches || !clickEvt.currentTarget.classList.contains('has-megamenu')){
       return;
@@ -203,14 +210,7 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
     //If the item we clicked allready has "is-active", close the menu
     if( pageHeaderListItemElem.classList.contains('is-active') ){
 
-      PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
-        pageHeaderLink => pageHeaderLink.classList.remove('is-active')
-      );
-      document.body.classList.remove("locked");
-
-      document.querySelectorAll('#mega-menu-wrapper .is-active').forEach(el => {
-        el.classList.remove('is-active');
-      });
+     this.closeMegaMenu();
 
     } else {
 
@@ -234,22 +234,32 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
     );
   };
 
+  /**
+   * Close Mega Menu if clicking outside of it
+   * @param {Event} evt - The click event
+   */
   handleOutsideClick(evt) {
-    console.log('Clicked outside the menu!');
     const isClickInside = evt.target.closest('#mega-menu-wrapper'); // Update this selector to match your actual menu/header area
     if (!isClickInside) {
 
-      PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
-        pageHeaderLink => pageHeaderLink.classList.remove('is-active')
-      );
-
-      document.body.classList.remove("locked");
-
-      document.querySelectorAll('#mega-menu-wrapper .is-active').forEach(el => {
-        el.classList.remove('is-active');
-      });
+      // If the click is outside the mega menu, close it
+      this.closeMegaMenu();
     }
   };
+
+  closeMegaMenu() {
+    PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
+      pageHeaderLink => pageHeaderLink.classList.remove('is-active')
+    );
+  
+    document.body.classList.remove("locked");
+  
+    document.querySelectorAll('#mega-menu-wrapper .is-active').forEach(el => {
+      el.classList.remove('is-active');
+    });
+  }
+
+  
   /**
    *  Enqueue custom MSC "Blocks"
    */
