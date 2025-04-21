@@ -4,36 +4,12 @@ get_header();
 get_template_part( 'partials/header' );
 ?>
 <div class="content container--site__sub">
-<?php echo do_blocks(
-    '<!-- wp:mrcm/split-media {
-        "name":"mrcm/split-media",
-        "data":{
-            "field_67e0b295bced4":"We cant seem to Find that.",
-            "field_67e0b295bced9":"The page you were looking for doesnt exist. It might have been moved or deleted. Please check the URL for any typos or try the navigation menu to find what youre looking for.\r\n\r\nOtherwise, you can return to our homepage by clicking the button below.",
-            "field_67e0b295bcede":"",
-            "field_67e0b295bcee3":{
-                "row-0":{
-                    "field_67e0b295c4436_field_67a9baf87bf6c":{
-                        "field_67a9bc5f76bb4":"link",
-                        "field_67a9bbcc76bb3":{
-                            "title":"Go to Homepage",
-                            "url":"https://matrixservicecompany.com/",
-                            "target":""
-                        }
-                    }
-                }
-            },
-            "field_67e0b295bceec":"13786",
-            "field_67e6b8d5104df":"",
-            "field_67f535bb071a8":{
-                "field_67f535bb071a8_field_67eecdbfdfce1":{
-                    "field_67eecdcedfce2":"l2r",
-                    "field_67eece02dfce3":"arrow-right",
-                    "field_67eece22dfce4":"0"
-                }
-            }
-        },
-        "mode":"auto"} /-->'); ?>
+    <h2 class="headline">We cant seem to Find that.</h2>
+    <p>The page you were looking for doesnt exist. It might have been moved or deleted. Please check the URL for any typos or try the navigation menu to find what youre looking for.</p>
+    <p>Otherwise, you can return to our homepage by clicking the button below.</p>
+    <div>
+        <a href="<?php echo bloginfo('url'); ?>" class="cta--magic btn btn-outline">Go to Homepage</a>
+    </div>
 </div>
 <div class="footer_blocks">
 <?php 
