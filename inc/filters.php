@@ -461,3 +461,51 @@ function facetwp_query_args_msc( $query_args, $class ) {
   }
   return $query_args;
 };
+
+
+function allowed_block_types_all_msc( $allowed_block_types, $block_editor_context )  {
+// If the current user doesn't have the correct permissions, disallow blocks.
+
+  $disallowed_blocks = array(
+    'core/verse',
+    'core/code',
+    'core/preformatted',
+    'core/page-list',
+    'core/archives',
+    'core/calendar',
+    'core/rss',
+    'core/latest-comments',
+    'core/latest-posts',
+    'core/search',
+    'core/tag-cloud',
+    'core/nextpage',
+    'core/more',
+    'core/latest-posts',
+    'core/archives',
+    'core/separator'
+  );
+  
+  // Get all registered blocks if $allowed_block_types is not already set.
+  if ( ! is_array( $allowed_block_types ) || empty( $allowed_block_types ) ) {
+    $registered_blocks   = WP_Block_Type_Registry::get_instance()->get_all_registered();
+    $allowed_block_types = array_keys( $registered_blocks );
+  }
+
+  // Create a new array for the allowed blocks.
+  $filtered_blocks = array();
+
+  // Loop through each block in the allowed blocks list.
+  foreach ( $allowed_block_types as $block ) {
+
+    // Check if the block is not in the disallowed blocks list.
+    if ( ! in_array( $block, $disallowed_blocks, true ) ) {
+
+      // If it's not disallowed, add it to the filtered list.
+      $filtered_blocks[] = $block;
+    }
+  }
+
+  // Return the filtered list of allowed blocks
+  return $filtered_blocks;
+
+}
