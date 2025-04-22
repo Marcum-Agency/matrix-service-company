@@ -231,29 +231,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "relevanssi_exclude": 0,
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
-            "key": "field_67ff98deff8ab",
-            "label": "Text Center",
-            "name": "text_center",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -456,5 +434,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744804089
+    "modified": 1745241097
 }
