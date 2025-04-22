@@ -46,6 +46,7 @@ add_filter_msc( array(
     ['facetwp_map_marker_args', 10, 2],
     ['facetwp_map_init_args',10,2],
     ['facetwp_query_args', 10,2],
-    ['allowed_block_types_all', 10, 2]
+    ['allowed_block_types_all', 10, 2],
+    'facetwp_facet_dropdown_show_counts'
 ) );
 remove_filter( 'wp_robots', 'wp_robots_max_image_preview_large' );

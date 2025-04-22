@@ -148,6 +148,10 @@ function facetwp_map_marker_args_msc ( $args, $post_id ) {
     return $args;
 };
 
+function facetwp_facet_dropdown_show_counts_msc() {
+    return false;
+};
+
 function facetwp_map_init_args_msc( $args ) {
     $args['init']['mapTypeControl']    = false; // roadmap / satellite toggle
     $args['init']['streetViewControl'] = false; // street view / yellow man icon
