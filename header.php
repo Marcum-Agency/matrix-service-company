@@ -35,6 +35,8 @@
         $body_id = "site-posts";
     elseif( is_404() ):
         $body_id = "site-404";
+    elseif( is_search() ):
+        $body_id = "site-search";
     endif;
     wp_head();
 ?>

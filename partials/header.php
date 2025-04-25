@@ -6,6 +6,8 @@ elseif( is_home() ):
     $title = get_the_title(get_option('page_for_posts', true));
 elseif(is_404()):
     $title = '404: <strong>Page Not Found</strong>';
+elseif(is_search()):
+    $title = 'Search Results for: <strong>' . get_search_query() . '</strong>';
 else:
     $title = get_the_title();
 endif;
