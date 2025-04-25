@@ -828,7 +828,7 @@ green : #6CB640
 
 @media (hover:hover) and (pointer:fine) {
 
-  .header--site:has(.nav-menu-item.is-active) .mega-menu-wrapper,
+  .header--site:has(.nav-menu-item:hover) .mega-menu-wrapper,
   .mega-menu-wrapper:hover {
     display: block;
   }
