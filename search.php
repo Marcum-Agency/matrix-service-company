@@ -2,35 +2,48 @@
 get_header();
 
 get_template_part( 'partials/header' );
+
+global $wp_query;
 ?>
-  <div class='container--site'>
-    <div class="content">
-      <div class='flex flex-wrap xxl:w-3/4 mx-auto'>
+<section class="filter-container">
+          <div class="container--site">
+              <div class="filter-container__inner">
+                  <div class="filter-group">
+                      <?php echo get_search_form( ); ?> 
+                      <?php echo facetwp_display( 'facet',"categories" ); ?>
+                      <button value="Reset" onclick="FWP.reset()" class="btn facet-reset">Reset</button>
+                  </div>
+                  <?php echo facetwp_display( 'facet',"sort_" ); ?>
+              </div>
+          </div>
+      </div>
+</section>
+<section class='content container--site'>
+      <div class='search-result--container'>
+
+
         <?php if (!have_posts()): ?>
-            <div class="alert alert-warning mx-auto lg:w-3/4 text-center">
+            <div class="alert alert-warning">
             <?php echo 'Sorry, no results were found.' ?>
             </div>
+        <?php 
+        else: 
+          global $wp_query;
+          $total =  number_format($wp_query->found_posts); ?>
+          <div class='search-result__number'>
+            <?php echo "<p>We found <strong>$total</strong> results matching your search for <strong>" . get_search_query() . "</strong></p>"; ?>
+          </div>
+      <?php endif;
 
-            <form role="search" method="get" class="search-form flex my-1 mx-auto w-full lg:w-3/4 my-10" action="<?php echo esc_url( home_url( '/' ) ) ?>">
-            <label class='w-3/4'>
-                <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
-                <input type="search" class="search-field w-full bg-grey p-2 border-grey-darker border-2" placeholder="{!! esc_attr_x( 'Search &hellip;', 'placeholder' ) !!}" value="<?php echo get_search_query() ?>" name="s" />
-            </label>
-            <button type="submit" class="search-submit ml-5 border-2 border-white hover:border-primary" value="<?php echo esc_attr_x( 'Search ', 'submit button' ) ?>" />
-                Search <i class='fas fa-search'></i>
-            </button>
-            </form>
-        <?php endif;
         while(have_posts()): the_post(); ?>
-            <article <?php post_class('search_result'); ?>>
+            <article <?php post_class('search-result'); ?>>
                 <span><?php echo get_post_type(); ?></span>
                 <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                <p><?php the_excerpt(  ); ?></p>
-                <a href="">Read More <i class='fas fa-arrow-right'></i></a>
+                <?php the_excerpt( ); ?>
+                <div class="link-container"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Read More <i class='fas fa-arrow-right'></i></a></div>
             </article>
         <?php endwhile; ?>
     </div>
-  </div>
-</div>
+</section>
 
 <?php get_footer();
