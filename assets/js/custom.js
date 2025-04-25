@@ -4,9 +4,9 @@ const list = document.querySelector('.scroll-list');
 const items = document.querySelectorAll('.scroll-list li');
 
 const totalSlides = items.length;
-const liHeight = 90;
+const liHeight = 60;
 const scrollPerItem = window.innerHeight;
-const initialOffset = 90;
+const initialOffset = 60;
 
 
 const tl = new TimelineMax();
