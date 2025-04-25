@@ -50,3 +50,27 @@ add_filter_msc( array(
     'facetwp_facet_dropdown_show_counts'
 ) );
 remove_filter( 'wp_robots', 'wp_robots_max_image_preview_large' );
+
+// Add custom column to admin list table
+add_filter( 'manage_location_posts_columns', 'add_location_name_column' );
+function add_location_name_column( $columns ) {
+    // Create a new array and insert "Location Name" before the "Date" column
+    $new_columns = [];
+
+    foreach ( $columns as $key => $value ) {
+        if ( $key === 'date' ) {
+            $new_columns['location_name'] = 'Location Name';
+        }
+        $new_columns[ $key ] = $value;
+    }
+
+    return $new_columns;
+}
+
+// Display the custom field value in the column
+add_action( 'manage_location_posts_custom_column', 'show_location_name_column', 10, 2 );
+function show_location_name_column( $column, $post_id ) {
+    if ( 'location_name' === $column ) {
+        echo esc_html( get_post_meta( $post_id, 'location_name', true ) );
+    }
+}

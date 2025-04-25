@@ -7,6 +7,11 @@ function body_class_msc( $classes ){
     global $post;
     if( is_404() ):
         $classes_new[] = 'view--404';
+    elseif( is_search() ):
+        $classes_new[] = 'view--search';
+        if( isset( $_GET['s'] ) ):
+            $classes_new[] = 'view--search--'. strtolower( $_GET['s'] );
+        endif;
     elseif( is_single() ):
         $classes_new[] = 'single';
         if( isset( $post->post_type) ):
@@ -139,7 +144,7 @@ function get_the_archive_title_msc ($title) {
 
 function facetwp_map_marker_args_msc ( $args, $post_id ) {
     $args['icon'] = [
-        'url' => get_stylesheet_directory_uri() . '/assets/img/map-pin.png',
+        'url' => get_stylesheet_directory_uri() . '/assets/img/location-dot-solid.svg',
         'scaledSize' => [
             'width' => 20,
             'height' => 24
