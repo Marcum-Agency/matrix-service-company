@@ -5,7 +5,7 @@ const items = document.querySelectorAll('.scroll-list li');
 
 const totalSlides = items.length;
 const liHeight = 60;
-const scrollPerItem = window.innerHeight;
+const scrollPerItem = window.innerHeight / 4;
 const initialOffset = 60;
 
 

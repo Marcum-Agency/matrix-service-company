@@ -273,7 +273,8 @@
 @media screen and (max-width: 1023px) {
 	.facetwp-load-more { padding: 10px 25px 12px; }
 	.filter-container .filter-container__inner .facetwp-type-sort select, 
-	.filter-container .filter-container__inner .fs-wrap .fs-label-wrap .fs-label { font-weight: 600; letter-spacing: 0.04em; font-size: 15px; }	
+	.filter-container .filter-container__inner .fs-wrap .fs-label-wrap .fs-label { font-weight: 600; letter-spacing: 0.02em; font-size: 14px; }
+	.filter-container .filter-container__inner .btn { padding: 10px 15px 12px; }	
 	.filter-container .filter-container__inner .facetwp-type-search input.facetwp-search { font-size: 16px; }
 	.filter-container .filter-container__inner .facetwp-type-search .facetwp-icon:before { background-size:20px auto; width: 20px; }
 	.filter-container .filter-container__inner .facetwp-type-search .facetwp-icon { top: 3px; }
@@ -316,6 +317,9 @@
 	.single .split-content:last-of-type{ height:auto; }
 
 	#site-main .footer_blocks .split-content { height:auto; background-size: 100% 200px; background-position: center 70px; }
+
+    .filter-container .filter-container__inner .facetwp-type-fselect { margin: 0 10px; }
+
 
 }
 
@@ -427,6 +431,22 @@
 .split-content.l2r.split-accordion .split-content__child.static-child,
 .split-posts .split-content__child.static-child { padding-top: 50px }
 .split-posts .post-swiper .swiper-wrapper { padding-bottom:0; }
+
+.filter-container .filter-container__inner .btn { padding: 10px 5px 12px; min-width: 60px; margin-top:0; }
+.filter-container__inner .filter-group #wpFacets.facet-filters { height: 35px; min-width: 40px; padding: 5px; }
+.filter-container__inner .filter-group #wpFacets.facet-filters .filter-bg { width: 26px; height: 25px; margin:auto; }
+.filter-container .filter-container__inner .filter-group { padding: 10px; }
+.filter-container .filter-container__inner .filter-group { min-height:55px; }
+.filter-container .filter-container__inner .fs-dropdown { position: relative; box-shadow:none; max-height:unset; padding-left: 10px; }
+.filter-container .filter-container__inner .facetwp-type-sort { margin-top:0; }
+.filter-container .filter-container__inner .fs-dropdown .fs-options { min-height:auto; padding:0; }
+
+.filter-container .facetwp-type-search input.facetwp-search { padding-left:25px !important; }
+.filter-container .facetwp-type-search input.facetwp-search { height:35px; }
+.filter-container .filter-container__inner .facetwp-type-fselect { margin: 0 0px; }
+
+
+
 
 
 }
