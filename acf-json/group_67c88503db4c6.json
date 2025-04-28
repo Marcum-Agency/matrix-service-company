@@ -203,6 +203,7 @@
                     "collapsed": "field_67c8910680b69",
                     "button_label": "Add Mega Menu <em>List<\/em>",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_67c886a98ff75",
                     "sub_fields": [
                         {
                             "key": "field_67c8910680b69",
@@ -248,6 +249,7 @@
                             "collapsed": "field_67c8917f80b6b",
                             "button_label": "Add <em>Link<\/em>",
                             "rows_per_page": 20,
+                            "parent_repeater": "field_67c890a280b68",
                             "sub_fields": [
                                 {
                                     "key": "field_67c8917f80b6b",
@@ -268,11 +270,9 @@
                                     "allow_in_bindings": 0,
                                     "parent_repeater": "field_67c8912380b6a"
                                 }
-                            ],
-                            "parent_repeater": "field_67c890a280b68"
+                            ]
                         }
-                    ],
-                    "parent_repeater": "field_67c886a98ff75"
+                    ]
                 }
             ]
         },
@@ -389,6 +389,58 @@
             "default_value": "",
             "allow_in_bindings": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_680c62b2361ee",
+            "label": "Search",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_680c62c3361ef",
+            "label": "Quick Links",
+            "name": "quick_links",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 1,
+            "post_type": [
+                "page",
+                "capability",
+                "market",
+                "project"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -409,5 +461,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744122564
+    "modified": 1745643059
 }
