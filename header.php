@@ -100,7 +100,7 @@
             if( $links ) {
                 echo '<ul class="quick-links">';
                 foreach( $links as $link ) {
-                    echo '<li><a href="'. get_permalink( $link->ID ) . '">'. esc_html($link->post_name) .' <i class="fa-solid fa-arrow-right"></i></a></li>';
+                    echo '<li><a href="'. get_permalink( $link->ID ) . '">'. esc_html($link->post_title) .' <i class="fa-solid fa-arrow-right"></i></a></li>';
                 }
                 echo '</ul>';
             } else {
@@ -110,5 +110,24 @@
         </div>
     </div>
   </div>
+</div>
+<!-- Mobile Nav -->
+ <div id="MobileNav" class="mobile-nav">
+    <div class="mobile-nav__inner">
+    <?php wp_nav_menu(
+            array(
+                'menu' => "Site Header",
+                'theme_location' => "site-header",
+                'container' => 'nav',
+                'container_id' => "mobile-header-nav",
+                'container_class' => "header--site__component nav--header nav--header--site",
+                'menu_id' => "site-header-nav-list",
+                'menu_class' => 'nav-header__list nav-header--site__list',
+                'item_spacing' => 'discard',
+				'after' => '<span class="arrow">arrow</span>',
+                'items_wrap' => '<ul role="list" id="%1$s" class="%2$s">%3$s</ul>'
+            )
+        );echo PHP_EOL; ?>       
+    </div>
 </div>
 <section id="site-main" class="main--site">

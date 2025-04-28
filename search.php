@@ -10,10 +10,7 @@ global $wp_query;
               <div class="filter-container__inner">
                   <div class="filter-group">
                       <?php echo get_search_form( ); ?> 
-                      <?php echo facetwp_display( 'facet',"categories" ); ?>
-                      <button value="Reset" onclick="FWP.reset()" class="btn facet-reset">Reset</button>
                   </div>
-                  <?php echo facetwp_display( 'facet',"sort_" ); ?>
               </div>
           </div>
       </div>
@@ -44,6 +41,11 @@ global $wp_query;
             </article>
         <?php endwhile; ?>
     </div>
+    <!-- pagination -->
+<div class="pagination">
+    <?php previous_posts_link(); ?>
+    <?php next_posts_link(); ?>
+</div>
 </section>
 
 <?php get_footer();

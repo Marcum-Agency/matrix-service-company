@@ -20,6 +20,9 @@ $opacity = get_field('black_overlay') ? get_field('black_overlay') : 'opacity-80
             $newsID = get_option('page_for_posts', true);
             $url = get_the_post_thumbnail_url($newsID, 'full');
 
+            elseif(is_search()):
+                $url = get_field('search_result_header_image', 'option')['url'];
+
             if($url): ?>
                 <img src="<?php echo $url; ?>" alt="<?php echo get_the_title($newsID); ?>" class="<?php echo $opacity; ?>"/>
             <?php endif;
