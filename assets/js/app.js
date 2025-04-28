@@ -4,7 +4,7 @@
   const SEARCH_TOGGLE_ELEM = document.querySelector('#searchToggle');
 
   // Only add close button if viewport is less than 37.5em (600px)
-if (window.matchMedia("(max-width: 37.5em)").matches) {
+if (window.matchMedia("(max-width: 48em)").matches) {
 
     document.addEventListener("click", function(event) {
       const trigger = event.target.closest(".header--site .has-megamenu a, .header--site .has-megamenu span");
@@ -17,7 +17,32 @@ if (window.matchMedia("(max-width: 37.5em)").matches) {
       document.body.classList.toggle("locked");
 
     });
+
 } 
+
+function mobileMenuToggle() {
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenuToggleBtn = document.querySelector('#mobileMenuToggle');
+  const body = document.body;
+
+  const isClosed = mobileMenu.dataset.mobileMenu === 'closed';
+
+  if (isClosed) {
+    // Open mobile menu
+    mobileMenu.dataset.mobileMenu = 'open';
+    mobileMenu.classList.remove('animated', 'bounceOutUp');
+    mobileMenu.classList.add('mobile-menu-is-active');
+    body.classList.add('locked');
+  } else {
+    // Close mobile menu
+    mobileMenu.dataset.mobileMenu = 'closed';
+    mobileMenu.classList.add('animated', 'bounceOutUp');
+    setTimeout(() => {
+      mobileMenu.classList.remove('mobile-menu-is-active');
+      body.classList.remove('locked');
+    }, 500);
+  }
+}
 
 //Lazy load videos
 function lazyVideoLoader() {

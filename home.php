@@ -11,7 +11,16 @@ get_template_part( 'partials/header' );
                 <div class="filter-group">
                 <?php echo facetwp_display( 'facet',"media_search" ); ?>
                 <?php echo facetwp_display( 'facet',"categories" ); ?>
+                <button id="wpFacets" onclick="document.querySelector('.filter-group__mobile').classList.toggle('fs-hidden');" class="btn facet-filters">
+                        <span class="sr-only">Toggle Filters Open</span>
+                        <div class="filter-bg"></div>
+                    </button>
                 <button value="Reset" onclick="FWP.reset()" class="btn facet-reset">Reset</button>
+            </div>
+            <!--Repeat the filters for mobile-->
+            <div class="filter-group__mobile fs-hidden">
+                <?php echo facetwp_display( 'facet',"categories" ); ?>
+                <?php echo facetwp_display( 'facet',"sort_" ); ?>
             </div>
             <?php echo facetwp_display( 'facet',"sort_" ); ?>
         </div>
