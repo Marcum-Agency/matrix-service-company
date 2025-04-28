@@ -185,3 +185,12 @@ add_filter( 'facetwp_gmaps_api_key', function( $api_key) {
     return get_field('google_maps_api','options');
   });
   
+
+  add_action( 'template_redirect', 'wpse_128636_redirect_post' );
+
+function wpse_128636_redirect_post() {
+  if ( is_singular( 'location' ) ) :
+    wp_redirect( '/about/locations', 301 );
+    exit;
+  endif;
+}
