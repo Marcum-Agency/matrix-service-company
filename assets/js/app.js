@@ -1,6 +1,7 @@
 ( ( NAMESPACE, _ ) => {
   const PAGE_HEADER_LIST_ITEM_ELEMS = _.getElems('#site-header .nav-menu-item').slice(0, -1);
   const MEGA_MENU_WRAPPER_ELEM = _.viaId('mega-menu-wrapper');
+  const SEARCH_TOGGLE_ELEM = document.querySelector('#searchToggle');
 
   // Only add close button if viewport is less than 37.5em (600px)
 if (window.matchMedia("(max-width: 37.5em)").matches) {
@@ -20,14 +21,14 @@ if (window.matchMedia("(max-width: 37.5em)").matches) {
 
 //Lazy load videos
 function lazyVideoLoader() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+  let lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
   if ("IntersectionObserver" in window) {
-    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+    let lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
         if (video.isIntersecting) {
-          for (var source in video.target.children) {
-            var videoSource = video.target.children[source];
+          for (let source in video.target.children) {
+            let videoSource = video.target.children[source];
             if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
               videoSource.src = videoSource.dataset.src;
             }
@@ -44,6 +45,48 @@ function lazyVideoLoader() {
       lazyVideoObserver.observe(lazyVideo);
     });
   }
+}
+
+function searchToggle() {
+  const searchModal = document.querySelector('.search-modal');
+  //const searchToggleBtn = document.querySelector('#searchToggle');
+
+  const searchField = document.querySelector('.search-field');
+  const closeSearchIcon = document.querySelector('.close-search');
+  const searchIcon = document.querySelector('.search-icon');
+  const body = document.body;
+
+  const isClosed = SEARCH_TOGGLE_ELEM.dataset.searchToggle === 'closed';
+
+  if (isClosed) {
+    // Open search
+    SEARCH_TOGGLE_ELEM.dataset.searchToggle = 'open';
+
+    searchModal.classList.remove('animated', 'bounceOutUp');
+    searchModal.classList.add('search-is-active');
+
+
+    setTimeout(() => {
+      searchField?.focus();
+    }, 500);
+
+  } else {
+    // Close search
+    SEARCH_TOGGLE_ELEM.dataset.searchToggle = 'closed';
+
+    searchModal.classList.add('animated', 'bounceOutUp');
+
+    setTimeout(() => {
+      searchModal.classList.remove('search-is-active');
+    }, 500);
+  }
+
+  // Icon toggle
+  closeSearchIcon?.classList.toggle('hidden');
+  searchIcon?.classList.toggle('hidden');
+
+  // Body toggle
+  body.classList.toggle('locked');
 }
 
 
@@ -126,7 +169,7 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
     _.w.listenTo( 'scroll:30', this.doScrollDetermination.bind( this ) );
     document.addEventListener('facetwp-loaded', function() {if ( ! FWP.loaded ) { fUtil('.facetwp-type-sort select').fSelect( { showSearch: false } );}});
     document.addEventListener("DOMContentLoaded", function() {lazyVideoLoader(); });
-
+    SEARCH_TOGGLE_ELEM.addEventListener( 'click', searchToggle );
     PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
       pageHeaderLink => pageHeaderLink.addEventListener( 'mouseover', this.markActiveMegaMenuIndex.bind(this) )
     );
@@ -163,10 +206,20 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
    */
   markActiveMegaMenuIndex( mouseoverEvt ){
     const pageHeaderListItemElem = mouseoverEvt.currentTarget;
+
+  // If the hovered item doesn't have the mega menu class, hide all mega menu panels
+  if (!pageHeaderListItemElem.classList.contains('has-megamenu')) {
+    Array.from(MEGA_MENU_WRAPPER_ELEM.children).forEach(
+      child => child.classList.remove('is-active')
+    );
+    return;
+  }
+
     const idx = Array.from( mouseoverEvt.currentTarget.parentElement.children ).findIndex(
       el => el === mouseoverEvt.currentTarget
     );
-    MEGA_MENU_WRAPPER_ELEM.children.forEach(
+
+    Array.from(MEGA_MENU_WRAPPER_ELEM.children).forEach(
       ( megaMenuChildElem, _idx ) => {
         megaMenuChildElem.classList[(_idx === idx ? 'add' : 'remove')]('is-active');
       }
