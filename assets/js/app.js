@@ -2,27 +2,33 @@
   const PAGE_HEADER_LIST_ITEM_ELEMS = _.getElems('#site-header .nav-menu-item').slice(0, -1);
   const MEGA_MENU_WRAPPER_ELEM = _.viaId('mega-menu-wrapper');
   const SEARCH_TOGGLE_ELEM = document.querySelector('#searchToggle');
+  const MOBILE_MENU_BTN = document.querySelector('#trigger-mega-menu');
 
   // Only add close button if viewport is less than 37.5em (600px)
 if (window.matchMedia("(max-width: 48em)").matches) {
 
     document.addEventListener("click", function(event) {
-      const trigger = event.target.closest(".header--site .has-megamenu a, .header--site .has-megamenu span");
+      const trigger = event.target.closest(".mobile-nav .has-megamenu a, .mobile-nav .has-megamenu span");
       if (!trigger) return;
+
+      if (trigger.classList.contains("has-megamenu")) {
+        event.preventDefault();
+      }
+
      
       trigger.parentElement.classList.toggle("activate");
       const subMenu = trigger.parentElement.querySelector(".sub-menu");
       subMenu?.classList.toggle("active");
 
-      document.body.classList.toggle("locked");
+      // document.body.classList.toggle("locked");
 
     });
 
 } 
 
 function mobileMenuToggle() {
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const mobileMenuToggleBtn = document.querySelector('#mobileMenuToggle');
+  const mobileMenu = document.querySelector('#MobileNav');
+  const mobileMenuToggleBtn = document.querySelector('#trigger-mega-menu');
   const body = document.body;
 
   const isClosed = mobileMenu.dataset.mobileMenu === 'closed';
@@ -198,6 +204,7 @@ const HeadlinePlusCtaOverMedia = class HeadlinePlusCtaOverMedia extends Block {
     PAGE_HEADER_LIST_ITEM_ELEMS.forEach(
       pageHeaderLink => pageHeaderLink.addEventListener( 'mouseover', this.markActiveMegaMenuIndex.bind(this) )
     );
+    MOBILE_MENU_BTN.addEventListener( 'click', mobileMenuToggle );
 
   };
   

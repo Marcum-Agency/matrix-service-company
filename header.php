@@ -65,7 +65,7 @@
                 'menu_class' => 'nav-header__list nav-header--site__list',
                 'item_spacing' => 'discard',
 				'after' => '<span class="arrow">arrow</span>',
-                'items_wrap' => '<a href="/" class="escape-hatch"><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo.svg" class="logo--header dark"></svg><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo--reversed.svg" class="logo--header light"></svg></a><ul role="list" id="%1$s" class="%2$s">%3$s</ul><button onclick="this.parentElement.classList.toggle(\'is-engaged\')" id="trigger-mega-menu" class="btn--naked"><span></span><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/font-awesome/bars--solid.svg"></svg></button>'
+                'items_wrap' => '<a href="/" class="escape-hatch"><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo.svg" class="logo--header dark"></svg><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo--reversed.svg" class="logo--header light"></svg></a><ul role="list" id="%1$s" class="%2$s">%3$s</ul><button id="trigger-mega-menu" class="btn--naked"><span></span><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/font-awesome/bars--solid.svg"></svg></button>'
             )
         );echo PHP_EOL; ?>
         <div class="search-button--container">
@@ -112,7 +112,7 @@
   </div>
 </div>
 <!-- Mobile Nav -->
- <div id="MobileNav" class="mobile-nav">
+ <div id="MobileNav" class="mobile-nav" data-mobile-menu="closed" >
     <div class="mobile-nav__inner">
     <?php wp_nav_menu(
             array(
@@ -127,7 +127,47 @@
 				'after' => '<span class="arrow">arrow</span>',
                 'items_wrap' => '<ul role="list" id="%1$s" class="%2$s">%3$s</ul>'
             )
-        );echo PHP_EOL; ?>       
+        );echo PHP_EOL; ?>
+        <?php echo get_search_form(); ?>
+         <div class="footer--site__social">
+            <ul role='list' class='list--social'>
+                <?php if( get_field('linkedin', 'options') ): ?>
+                    <li class='list-item--social'>
+                        <a href='<?php the_field('linkedin', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Visit Matrix Service Company on Linkedin">
+                            <svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/linkedin.svg' class='list-item-vector--social'></svg>
+                        </a>
+                    </li>
+                <?php endif;
+                if( get_field('facebook', 'options') ): ?>
+                    <li class='list-item--social'>
+                        <a href='<?php the_field('facebook', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Facebook">
+                            <svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/facebook.svg' class='list-item-vector--social'></svg>
+                        </a>
+                    </li>
+                <?php endif;
+                if( get_field('instagram', 'options') ): ?>
+                    <li class='list-item--social'>
+                        <a href='<?php the_field('instagram', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Instagram">
+                            <svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/instagram.svg' class='list-item-vector--social'></svg>
+                        </a>
+                    </li>
+                <?php endif;
+                if( get_field('youtube', 'options') ): ?>
+                    <li class='list-item--social'>
+                        <a href='<?php the_field('youtube', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Subscribe to Matrix Service Company on Youtube">
+                            <svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/youtube.svg' class='list-item-vector--social'></svg>
+                        </a>
+                    </li>
+                <?php endif;
+                if( get_field('twitterx', 'options') ): ?>
+                    <li class='list-item--social'>
+                        <a href='<?php the_field('twitterx', 'options'); ?>' rel="nofollow noopener noreferrer" target="_blank" class='list-item-anchor--social' aria-label="Follow Matrix Service Company on Twitter/X">
+                            <svg data-src='<?php echo get_stylesheet_directory_uri() ?>/assets/svg/font-awesome/twitter.svg' class='list-item-vector--social'></svg>
+                        </a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>         
     </div>
 </div>
 <section id="site-main" class="main--site">
