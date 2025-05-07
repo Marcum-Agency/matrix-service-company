@@ -210,9 +210,9 @@
                             "label": "List Title",
                             "name": "list-title",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "post_object",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "35",
@@ -220,12 +220,20 @@
                                 "id": ""
                             },
                             "relevanssi_exclude": 0,
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
+                            "post_type": [
+                                "market",
+                                "page",
+                                "capability"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "return_format": "object",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 1,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": [],
                             "parent_repeater": "field_67c890a280b68"
                         },
                         {
@@ -271,6 +279,37 @@
                                     "parent_repeater": "field_67c8912380b6a"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_6819930c256ab",
+                            "label": "Menu Items",
+                            "name": "menu_items",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "relevanssi_exclude": 0,
+                            "post_type": [
+                                "page",
+                                "market",
+                                "capability"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "return_format": "object",
+                            "multiple": 1,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "ui": 1,
+                            "bidirectional_target": [],
+                            "parent_repeater": "field_67c890a280b68"
                         }
                     ]
                 }
@@ -443,8 +482,8 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_680fc8ab2310c",
-            "label": "Search Result Header Image",
+            "key": "field_681ae62940fa3",
+            "label": "Search Results Header",
             "name": "search_result_header_image",
             "aria-label": "",
             "type": "image",
@@ -488,5 +527,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745864897
+    "modified": 1746593616
 }

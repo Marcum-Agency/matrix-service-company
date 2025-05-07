@@ -819,7 +819,9 @@ green : #6CB640
   &.mobile-menu-is-active {
     display: block;
     height: 100dvh;
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
     z-index: 200;
     overflow: scroll;
 
@@ -987,6 +989,10 @@ green : #6CB640
     width: auto;
     border-bottom: 2px solid;
 
+    input {
+      max-width: 75%;
+    }
+
     button {
       background: none;
       color: black;
@@ -1142,6 +1148,11 @@ green : #6CB640
     padding-left: 0.5rem;
     font-size: 25px;
     transform: translateY(-1px);
+    max-width: 65%;
+
+    @media (min-width: 768px) {
+      max-width: unset;
+    }
   }
 
   button {
@@ -1151,7 +1162,7 @@ green : #6CB640
     font-size: 18px;
     line-height: 1.5cap;
     text-underline-offset: .25rem;
-    padding: 10px 40px 12px;
+    padding: 10px 20px 12px;
     text-align: center;
     border: 2px solid var(--color-green);
     transition: all .3s ease;
@@ -1159,6 +1170,10 @@ green : #6CB640
     &:hover {
       background: var(--color-white);
       color: var(--color-green);
+    }
+
+    @media (min-width: 768px) {
+      padding: 10px 40px 12px;
     }
   }
 }
@@ -1383,8 +1398,9 @@ green : #6CB640
   text-box: trim-both cap alphabetic;
 }
 
-.mega-menu__links dt {
+.mega-menu__links dt a {
   block-size: 3cap;
+  font-weight: bold;
   color: var(--color-green);
   font-size: 1.25rem;
   line-height: 1;
@@ -2277,14 +2293,14 @@ body.locked {
   inline-size: 100% !important;
 }
 
-.mega-menu__links-wrapper>div dd:last-of-type a {
+/* .mega-menu__links-wrapper>div dd:last-of-type a {
   font-style: italic;
   color: var(--color-green);
 }
 
 .mega-menu__links-wrapper>div dd:last-of-type a:hover {
   font-weight: 700;
-}
+} */
 
 .header--site .nav-menu-item:not(:last-child).active>a {
   color: var(--color-green);
@@ -2602,7 +2618,7 @@ body:before {
 }
 
 .split-content.no-arrow {
-  background-image: none;
+  background-image: none !important;
 }
 
 .split-content.r2l .headline {
@@ -3488,7 +3504,7 @@ button {
 .single .split-content:last-of-type {
   min-height: auto;
   padding: 115px 0;
-  background-image: url(assets/img/curve-3.png) !important;
+  /* background-image: url(assets/img/curve-3.png) !important; */
   background-position: 44.7% 50% !important;
   background-size: auto 100%;
 }
@@ -3882,6 +3898,7 @@ button {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
 
   @media (min-width: 60rem) {
     max-width: 40%;

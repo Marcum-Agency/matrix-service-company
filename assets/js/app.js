@@ -11,7 +11,7 @@ if (window.matchMedia("(max-width: 48em)").matches) {
       const trigger = event.target.closest(".mobile-nav .has-megamenu a, .mobile-nav .has-megamenu span");
       if (!trigger) return;
 
-      if (trigger.classList.contains("has-megamenu")) {
+      if (trigger.parentElement.classList.contains("has-megamenu")) {
         event.preventDefault();
       }
 
