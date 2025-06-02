@@ -13,7 +13,5 @@
 
         <!-- Title -->
          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <!-- Location -->
-        <date><?php echo get_the_date( 'F j, Y', $post->ID); ?></date>
     </div>
 </div>

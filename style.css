@@ -2293,15 +2293,6 @@ body.locked {
   inline-size: 100% !important;
 }
 
-/* .mega-menu__links-wrapper>div dd:last-of-type a {
-  font-style: italic;
-  color: var(--color-green);
-}
-
-.mega-menu__links-wrapper>div dd:last-of-type a:hover {
-  font-weight: 700;
-} */
-
 .header--site .nav-menu-item:not(:last-child).active>a {
   color: var(--color-green);
 }
@@ -2538,6 +2529,18 @@ body:before {
   background-size: 100% 100%;
 }
 
+.block--cta-image-banner .cta--magic:not(.btn-outline) {
+  background-color: white;
+  border: 2px solid white;
+  transition: all .4s;
+
+  &:hover {
+    background-color: #6CB640;
+    border-color: #6CB640;
+    color: white;
+  }
+}
+
 #hero-slider .swiper-slide .bg-video__container:after {
   background: url(assets/img/video-arrow-r.png) center center no-repeat;
   width: 100%;
@@ -2709,15 +2712,6 @@ body:before {
   font-size: 20px;
 }
 
-/*.testimonial blockquote {
-  font-family: "Poppins", sans-serif;
-}
-
-.testimonial blockquote strong {
-  text-box: trim-both cap alphabetic; line-height:1; padding: 10px; display:inline-block; text-indent:0; vertical-align:top;
-  font-family: arial;
-}
-*/
 .testimonial blockquote strong span {
   position: relative;
   top: -2px;
@@ -4114,6 +4108,7 @@ button {
 .facetwp-template[data-name="testimonials"] {
   background: #efefef;
   padding: 75px 0;
+  max-width: unset;
 }
 
 .archive-container.testimony-archive {
@@ -4990,10 +4985,6 @@ select:focus {
   margin-right: 15px;
 }
 
-.single--post .single header .author {
-  margin-left: 15px;
-}
-
 .single--post .single ol,
 .single--post .single ul {
   padding-left: 50px;
@@ -5299,45 +5290,6 @@ select:focus {
   display: block;
   content: 'read less -';
 }
-
-
-/*locations*/
-/* .location-block .location-block__filters {
-  padding: 30px 110px 30px 145px;
-  min-height: 175px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.location-block .location-block__content .facetwp-template {
-  padding: 15px 110px 15px 145px;
-}
-
-.location-block .location-block__content .facetwp-template .type-location {
-  font-weight: 300;
-  font-size: 18px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  padding: 30px 25px 40px;
-  margin-bottom: 25px;
-}
-
-.location-block .type-location .location_type {
-  letter-spacing: 0.04em;
-  padding: 0 0 15px 0;
-}
-
-.location-block .type-location address {
-  padding-bottom: 5px;
-}
-
-.location-block .type-location h3 {
-  margin-bottom: 15px;
-}
-
-.location-block .location-block__content .facetwp-template {
-  height: calc(100% - 175px);
-} */
 
 .location-block__filters {
   padding: 1rem;
@@ -7027,7 +6979,7 @@ select:focus {
   }
 
   .category-tab-block .category-tab__tabs .category-tab__tab-list {
-    width: 900px;
+    width: 1100px;
   }
 
   .category-tab-block .category-tab__tabs .automatic button {
@@ -7976,12 +7928,28 @@ select:focus {
 
   .category-tab-block .children-category__list {
     margin: 0;
-
-    height: 370px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    overflow: auto;
+    overflow: visible;
+  }
+
+  .view--capabilities .category-tab-block .children-category__list,
+  .view--market .category-tab-block .children-category__list {
+    height: 370px;
+    overflow: scroll;
+  }
+
+  .view--capabilities .category-tab-block .container--site,
+  .view--capabilities .category-tab-block [role="tabpanel"],
+  .view--market .category-tab-block .container--site,
+  .view--market .category-tab-block [role="tabpanel"] {
+    padding-right: 0;
+  }
+
+  .view--capabilities .category-tab-block .parent-category__description,
+  .view--market .category-tab-block .parent-category__description {
+    padding-right: 1.5rem;
   }
 
   .category-tab-block .children-category__list a {
@@ -9224,4 +9192,19 @@ select:focus {
 .category-tab-block .container--site.reveal_visible {
   animation: reveal 1s forwards;
   -webkit-animation: reveal 1s forwards;
+}
+
+@media (min-width:768px) {
+
+  .mega-menu-wrapper .mega-menu,
+  .container--site {
+    inline-size: 89%;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    inline-size: 100%;
+  }
 }

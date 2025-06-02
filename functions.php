@@ -74,3 +74,6 @@ function show_location_name_column( $column, $post_id ) {
         echo esc_html( get_post_meta( $post_id, 'location_name', true ) );
     }
 }
+
+// Remove Cross-sell products from Woo Commerce cart page
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );

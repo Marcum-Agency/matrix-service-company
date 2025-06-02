@@ -14,8 +14,6 @@ if( have_posts() ):
         <header>
             <p class="categories"><?php the_category(' '); ?></p>
             <h1><?php the_title(); ?></h1>
-            <p><time><?php echo get_the_date(); ?></time> | <span class="author"><?php the_author(); ?></span></p>
-            
         </header>
 
         <?php the_content(); ?>
