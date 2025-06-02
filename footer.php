@@ -1,4 +1,3 @@
-
 </section>
 <footer id="site-footer" class="chrome--site footer--site" role="contentinfo">
     <div class='container--site'>
@@ -29,7 +28,7 @@
             </ul>
         </div>
         </div>
-        <p class="mrcm-link">© <?php echo Date('Y') . ' ' . get_bloginfo( 'name' ); ?>. All Rights Reserved. Website by <a href="https://marcum.agency" target="_blank" class="">marcum</a>.</p>
+        <p class="mrcm-link">© <?php echo Date('Y') . ' ' . get_bloginfo( 'name' ); ?>. All Rights Reserved.</p>
 
     </div>
 </footer>
