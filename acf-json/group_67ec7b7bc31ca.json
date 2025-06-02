@@ -29,7 +29,9 @@
             "allow_in_bindings": 0,
             "ui": 1,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67eee5390d984",
@@ -312,8 +314,8 @@
                                             "relevanssi_exclude": 0,
                                             "default_value": "",
                                             "allow_in_bindings": 0,
-                                            "tabs": "visual",
-                                            "toolbar": "basic",
+                                            "tabs": "all",
+                                            "toolbar": "full",
                                             "media_upload": 0,
                                             "delay": 0,
                                             "parent_repeater": "field_67f4819b0fb05"
@@ -383,5 +385,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744078049
+    "modified": 1748381030
 }
