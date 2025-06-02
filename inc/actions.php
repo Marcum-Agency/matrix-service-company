@@ -29,10 +29,10 @@ function wp_enqueue_scripts_msc(){
         'style',
         get_template_directory_uri() . '/style.css?v=' .rand(10000, 99999)
     );
-    wp_enqueue_style(
-        'style-gs',
-        get_template_directory_uri() . '/style--gs.css?v=' .rand(10000, 99999)
-    );
+    // wp_enqueue_style(
+    //     'style-gs',
+    //     get_template_directory_uri() . '/style--gs.css?v=' .rand(10000, 99999)
+    // );
     wp_enqueue_style(
         'blame',
         get_template_directory_uri() . '/blame.css'

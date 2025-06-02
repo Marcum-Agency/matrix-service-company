@@ -37,7 +37,9 @@ endif;
     <span class="location_type"><?php echo $location_name; ?></span>
     <h3><?php the_title(); ?></h3>
     <address>
-        <?php echo $readable_address; ?>
+        <?php echo $readable_address; ?><br>
+        <?php the_field('suite_number', get_the_ID()); ?>
     </address>
     <?php echo $output_number; ?>
 </div>
+

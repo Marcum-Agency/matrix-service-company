@@ -8,7 +8,7 @@
         script like the others have been added.
 */
 ?><meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -65,7 +65,7 @@
                 'menu_class' => 'nav-header__list nav-header--site__list',
                 'item_spacing' => 'discard',
 				'after' => '<span class="arrow">arrow</span>',
-                'items_wrap' => '<a href="/" class="escape-hatch"><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo.svg" class="logo--header dark"></svg><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo--reversed.svg" class="logo--header light"></svg></a><ul role="list" id="%1$s" class="%2$s">%3$s</ul><button id="trigger-mega-menu" class="btn--naked"><span></span><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/font-awesome/bars--solid.svg"></svg></button>'
+                'items_wrap' => '<a href="/" class="escape-hatch" aria-label="Matrix Home Page"><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo.svg" class="logo--header dark"></svg><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/logo--reversed.svg" class="logo--header light"></svg></a><ul role="list" id="%1$s" class="%2$s">%3$s</ul><button id="trigger-mega-menu" aria-label="Trigger Mega Menu" class="btn--naked"><span></span><svg data-src="'. get_stylesheet_directory_uri() .'/assets/svg/font-awesome/bars--solid.svg"></svg></button>'
             )
         );echo PHP_EOL; ?>
         <div class="search-button--container">
